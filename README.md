@@ -3,7 +3,7 @@ This is a demo  integration of Puppet and Conjur using Conjur modulel from puppe
 The demo also shows how Puppet module use HF token to automatically bootstrap machine identity for puppet node. 
 
 ## Demo Requirements
-1. Linux host with Docker daemon and Docker Compose installed
+1. OSX or Linux host with Docker daemon and Docker Compose installed
 2. Conjur Enteprise 5.x image - Load the image to docker using `docker load -i conjur-appliance-5.x.x.x.tar`.  
 Edit `docker-compose.yml` if using a different version. 
 3. Puppet Standalone image. - This can be download from https://puppet.com/download-puppet-enterprise  
@@ -22,14 +22,14 @@ After finish, execute `docker images` to check the new images. There should be t
 ## Starting The Demo
 To start the demo, execute `./1-start-demo.sh`
 This will bring up following services
-- puppet - Puppet Enterprise server
+- puppet - Puppet Standalone server
 - conjur - Conjur Server
 - conjurcli - Conjur cli to load policy and secret
-- dev-webapp
-- pro-webapp
+- dev-webapp - Development node
+- pro-webapp - Production node
 
 Conjur service is exposed on port 443 and puppet service is exposed on port 1443.  
-Web console credentail is admin/Cyberark1.
+Web console credential is admin/Cyberark1.
 OS credential is root/Cyberark1.
 
 ## Running The Demo
