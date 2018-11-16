@@ -6,8 +6,7 @@ The demo also shows how Puppet module use HF token to automatically bootstrap ma
 1. OSX or Linux host with Docker daemon and Docker Compose installed
 2. Conjur Enteprise 5.x image - Load the image to docker using `docker load -i conjur-appliance-5.x.x.x.tar`.  
 Edit `docker-compose.yml` if using a different version. 
-3. Puppet Standalone image. - This can be download from https://puppet.com/download-puppet-enterprise  
-The script was tested with version 6.
+3. Puppet Standalone image. - This will be pulled automatically during the build process. This demo was tested with version 6.
 
 ## Setting Up The Demo Environment
 The build process may take 10-15 minutes and require Internet connection.
