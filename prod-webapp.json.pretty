@@ -1,0 +1,4306 @@
+{
+  "tags": [
+    "puppet_enterprise",
+    "puppet_enterprise::profile::agent",
+    "profile",
+    "agent",
+    "puppet_enterprise::profile::mcollective::agent",
+    "mcollective",
+    "settings",
+    "__node_regexp__prod-webapp.",
+    "conjur::params",
+    "conjur",
+    "params",
+    "conjur::config_files",
+    "config_files",
+    "puppet_enterprise::params",
+    "puppet_enterprise::symlinks",
+    "symlinks",
+    "puppet_enterprise::pxp_agent",
+    "pxp_agent",
+    "puppet_enterprise::pxp_agent::service",
+    "service",
+    "puppet_enterprise::mcollective::server",
+    "server",
+    "puppet_enterprise::mcollective::server::plugins",
+    "plugins",
+    "puppet_enterprise::mcollective::service",
+    "puppet_enterprise::mcollective::server::logs",
+    "logs",
+    "puppet_enterprise::mcollective::server::certs",
+    "certs",
+    "puppet_enterprise::mcollective::server::facter",
+    "facter",
+    "puppet_enterprise::mcollective::cleanup",
+    "cleanup",
+    "node",
+    "class"
+  ],
+  "name": "prod-webapp",
+  "version": 1508738286,
+  "code_id": null,
+  "catalog_uuid": "e89408e6-5d61-4908-b539-6c363b4e9e1f",
+  "catalog_format": 1,
+  "environment": "production",
+  "resources": [
+    {
+      "type": "Stage",
+      "title": "main",
+      "tags": [
+        "stage"
+      ],
+      "exported": false
+    },
+    {
+      "type": "Class",
+      "title": "Settings",
+      "tags": [
+        "class",
+        "settings"
+      ],
+      "exported": false
+    },
+    {
+      "type": "Class",
+      "title": "Main",
+      "tags": [
+        "class"
+      ],
+      "exported": false,
+      "parameters": {
+        "name": "main"
+      }
+    },
+    {
+      "type": "Node",
+      "title": "__node_regexp__prod-webapp.",
+      "tags": [
+        "node",
+        "__node_regexp__prod-webapp.",
+        "class"
+      ],
+      "exported": false
+    },
+    {
+      "type": "Class",
+      "title": "Conjur::Params",
+      "tags": [
+        "class",
+        "conjur::params",
+        "conjur",
+        "params",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "exported": false
+    },
+    {
+      "type": "Class",
+      "title": "Conjur",
+      "tags": [
+        "class",
+        "conjur",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/etc/puppetlabs/code/environments/production/manifests/site.pp",
+      "line": 27,
+      "exported": false,
+      "parameters": {
+        "appliance_url": "https://conjur/api",
+        "authn_login": "host/prod-webapp",
+        "host_factory_token": "233pjv93q63knb87nz2g3zf80w63dcyv97bdnd9dgc0crw23c77vt",
+        "ssl_certificate": "-----BEGIN CERTIFICATE-----\nMIIDXjCCAkagAwIBAgIVAIjA/SY5hVzymn9DLyqDUQf/Apw1MA0GCSqGSIb3DQEB\nCwUAMEkxEzARBgNVBAoTClB1cHBldERlbW8xEjAQBgNVBAsTCUNvbmp1ciBDQTEe\nMBwGA1UEAxMVY29uanVyLmN5YmVyYXJrLmxvY2FsMB4XDTE3MTAyMzA1MDUyOFoX\nDTI3MTAyMTA1MDUyOFowIDEeMBwGA1UEAwwVY29uanVyLmN5YmVyYXJrLmxvY2Fs\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtOOHP4LJYEeh3E4ZxeUT\n5rVoY+3/z9ioajs1NkGyLrfQDj8Nj5F0MFQKEw44uDcLNwY335b+pGDhgsl0fmT6\n/kUnSxM/DkYVMoCXwxn5r+Ukz28ayXFUgsIFH647jJH3SWDl9X3WOwf3GW18MnW0\nh9fKq1rwlHy8Cu9fEF0aigsHltuUxM34fYsTZj42c+iQrtORVjsribAjc2Mg1jbJ\n4j5cVE5ASFz2Q5Wn2dQkL/01cfDQry2tYZ2q1Nwewliht/sy5mxXSJDHmpHy3ORi\n4K94i2p70G7aC0uxsVZdIKDOborkJ9tk5szzwcGgmI2CxQ2Qr3BAXhG5NZlHZ1sX\nOwIDAQABo2YwZDAOBgNVHQ8BAf8EBAMCBaAwHQYDVR0OBBYEFNo5o+5ea0sNMlW/\n75VgGJCv2AcJMDMGA1UdEQQsMCqCFWNvbmp1ci5jeWJlcmFyay5sb2NhbIIJbG9j\nYWxob3N0ggZjb25qdXIwDQYJKoZIhvcNAQELBQADggEBABoGJf246PuCK1SlFqnk\nP1VG4xUHizDSuTG2P5gJlBSWYD2FE3nxY2PqVnRvyJ2CT2574PuSNF8LznasaskB\n4203TXnP11MCXvsJYAPPWigmnLjG8HjeIIlIN9Ijb8bdbDcaXmLa1rLUg/MFzDPo\nC+/03gSYg1nK4D/WDIQ1sax0//b43oL1+gq9ih36aAGEKITPBZYLSxqUSmU1qeF6\nG6wQFYzajz5NUSrDfZ2GJQkbwncNRCpnzWVh+KwmgtLn+B4Tbx7YEc6tAYFTJVOq\np7xRd+Dh/JjjprJfykATp4Z2n6ogwbUN1PSJbHWVa7LL3VxXZS1I6o02Wgtf7VQq\njyU=\n-----END CERTIFICATE-----\n-----BEGIN CERTIFICATE-----\nMIIDqTCCApGgAwIBAgIJAPpYGHTsKcgfMA0GCSqGSIb3DQEBCwUAMEkxEzARBgNV\nBAoTClB1cHBldERlbW8xEjAQBgNVBAsTCUNvbmp1ciBDQTEeMBwGA1UEAxMVY29u\nanVyLmN5YmVyYXJrLmxvY2FsMB4XDTE3MTAyMzA1MDUyNVoXDTI3MTAyMTA1MDUy\nNVowSTETMBEGA1UEChMKUHVwcGV0RGVtbzESMBAGA1UECxMJQ29uanVyIENBMR4w\nHAYDVQQDExVjb25qdXIuY3liZXJhcmsubG9jYWwwggEiMA0GCSqGSIb3DQEBAQUA\nA4IBDwAwggEKAoIBAQC7uQ7l2LjMv5Zaa+dtjQMpbuLpMWTIWTkH0SxH90sIiOwC\nLtGjp+eSHCWn07MO506aB1nb+Qeae88zA/sPqqpxVgQaf5cKbVKOaC5/4UoshrKd\nPaY9Smsc0tLaBvMmLgNNwfZk3fCx2lFOPAw+wgi7Hr0VYjJ6SXV7ip+IePG9fnj3\n779hiOv1fW5c/xGteAN+w9k/FQCAQ3dnoJmhyvAltTgb6TV9siePt2/xA1B1d0GB\n4XGJzYeyEPC0M/1cVojo6u2eqvmSL+WZdgPP6q/+BtUkyNpq5vQ8YjvSfpkYvhI8\n0K9dZBArgoKG0x5x4c8X2zhG4k7jdKLba5vJB6dZAgMBAAGjgZMwgZAwMwYDVR0R\nBCwwKoIVY29uanVyLmN5YmVyYXJrLmxvY2Fsgglsb2NhbGhvc3SCBmNvbmp1cjAd\nBgNVHQ4EFgQUEdxd50QTGc/VOU/aOct/hFS9rAQwHwYDVR0jBBgwFoAUEdxd50QT\nGc/VOU/aOct/hFS9rAQwDAYDVR0TBAUwAwEB/zALBgNVHQ8EBAMCAeYwDQYJKoZI\nhvcNAQELBQADggEBAGpAzTcb9mVKE4vo5tbqYOB8p9oiRQ9KvHfqMrfkg6gp4Nil\nf4Zs1hL75ae8WQflMLtD5v1EaEX7IclahEQDnnjgIAR11T3EEds4S6RLvKudCEeb\nsyaxRoUQPIBuDHDfFrzZG6i+I9ip/XVQwKmSY3lQTfSSGigFnZdiJDsk6qJGkS67\nGtAAA+YMA1OF7lZnS2VYflhNbp75UK+w5C9pn4FZrhhNwdeXjILWxqaWt8PPf94q\nykjvT6+GbpBLEMG+2nz455ziHnLE7uPzOrScN5/V8pdg4DJ09PnVe22LCv1YfAbu\npciRYvRgF1Q+SDMFDodAE3rFPQ8EAoe0njldeRE=\n-----END CERTIFICATE-----\n",
+        "version": 4,
+        "account": "prod-webapp",
+        "authn_token": "{\"data\":\"host/prod-webapp\",\"timestamp\":\"2017-10-23 05:58:05 UTC\",\"signature\":\"LkakOXeeRrNGi2aeNY_KYHFehgK0m3mVZBS9VOEEQlj5LjLzh4YgP15jUMopJGlHXpvpAvUYeC_bk6DY07ct5BXqogdIxjwNPlHH6C9qnul2swQBS5-jSz06jpZEZVfym9AFV0_SNEcoSoUUxq-CD0aLNuus1MwcEdwWUf6yXryUHnhtxFHdnEkUcdjmPnVWKRP295DFrhGUoYAX4pNPNh_KSAkCAQblNMPbfKRwGl0AyUAsRn26M93u2G1epFlsY0Bka2xUitGQxsj5Xj5m0yN_16rYz1KXdBQAzCHPk0W64YDpAIxlAWp1G9_kDI6lIDYUnqfiQ5xD98t2oO7OdajSagvOB28vm3NRo351QhU3DhuRAOow4ie3ATBA3LMC\",\"key\":\"eb6594ef4a67a4c91d86718b1f10c97c\"}",
+        "require": [
+          "Class[Conjur::Config_files]"
+        ]
+      },
+      "sensitive_parameters": [
+        "host_factory_token",
+        "authn_token"
+      ]
+    },
+    {
+      "type": "Class",
+      "title": "Conjur::Config_files",
+      "tags": [
+        "class",
+        "conjur::config_files",
+        "conjur",
+        "config_files",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "exported": false
+    },
+    {
+      "type": "File",
+      "title": "/etc/conjur.pem",
+      "tags": [
+        "file",
+        "class",
+        "conjur::config_files",
+        "conjur",
+        "config_files",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/etc/puppetlabs/code/environments/production/modules/conjur/manifests/config_files.pp",
+      "line": 4,
+      "exported": false,
+      "parameters": {
+        "replace": false,
+        "content": "-----BEGIN CERTIFICATE-----\nMIIDXjCCAkagAwIBAgIVAIjA/SY5hVzymn9DLyqDUQf/Apw1MA0GCSqGSIb3DQEB\nCwUAMEkxEzARBgNVBAoTClB1cHBldERlbW8xEjAQBgNVBAsTCUNvbmp1ciBDQTEe\nMBwGA1UEAxMVY29uanVyLmN5YmVyYXJrLmxvY2FsMB4XDTE3MTAyMzA1MDUyOFoX\nDTI3MTAyMTA1MDUyOFowIDEeMBwGA1UEAwwVY29uanVyLmN5YmVyYXJrLmxvY2Fs\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtOOHP4LJYEeh3E4ZxeUT\n5rVoY+3/z9ioajs1NkGyLrfQDj8Nj5F0MFQKEw44uDcLNwY335b+pGDhgsl0fmT6\n/kUnSxM/DkYVMoCXwxn5r+Ukz28ayXFUgsIFH647jJH3SWDl9X3WOwf3GW18MnW0\nh9fKq1rwlHy8Cu9fEF0aigsHltuUxM34fYsTZj42c+iQrtORVjsribAjc2Mg1jbJ\n4j5cVE5ASFz2Q5Wn2dQkL/01cfDQry2tYZ2q1Nwewliht/sy5mxXSJDHmpHy3ORi\n4K94i2p70G7aC0uxsVZdIKDOborkJ9tk5szzwcGgmI2CxQ2Qr3BAXhG5NZlHZ1sX\nOwIDAQABo2YwZDAOBgNVHQ8BAf8EBAMCBaAwHQYDVR0OBBYEFNo5o+5ea0sNMlW/\n75VgGJCv2AcJMDMGA1UdEQQsMCqCFWNvbmp1ci5jeWJlcmFyay5sb2NhbIIJbG9j\nYWxob3N0ggZjb25qdXIwDQYJKoZIhvcNAQELBQADggEBABoGJf246PuCK1SlFqnk\nP1VG4xUHizDSuTG2P5gJlBSWYD2FE3nxY2PqVnRvyJ2CT2574PuSNF8LznasaskB\n4203TXnP11MCXvsJYAPPWigmnLjG8HjeIIlIN9Ijb8bdbDcaXmLa1rLUg/MFzDPo\nC+/03gSYg1nK4D/WDIQ1sax0//b43oL1+gq9ih36aAGEKITPBZYLSxqUSmU1qeF6\nG6wQFYzajz5NUSrDfZ2GJQkbwncNRCpnzWVh+KwmgtLn+B4Tbx7YEc6tAYFTJVOq\np7xRd+Dh/JjjprJfykATp4Z2n6ogwbUN1PSJbHWVa7LL3VxXZS1I6o02Wgtf7VQq\njyU=\n-----END CERTIFICATE-----\n-----BEGIN CERTIFICATE-----\nMIIDqTCCApGgAwIBAgIJAPpYGHTsKcgfMA0GCSqGSIb3DQEBCwUAMEkxEzARBgNV\nBAoTClB1cHBldERlbW8xEjAQBgNVBAsTCUNvbmp1ciBDQTEeMBwGA1UEAxMVY29u\nanVyLmN5YmVyYXJrLmxvY2FsMB4XDTE3MTAyMzA1MDUyNVoXDTI3MTAyMTA1MDUy\nNVowSTETMBEGA1UEChMKUHVwcGV0RGVtbzESMBAGA1UECxMJQ29uanVyIENBMR4w\nHAYDVQQDExVjb25qdXIuY3liZXJhcmsubG9jYWwwggEiMA0GCSqGSIb3DQEBAQUA\nA4IBDwAwggEKAoIBAQC7uQ7l2LjMv5Zaa+dtjQMpbuLpMWTIWTkH0SxH90sIiOwC\nLtGjp+eSHCWn07MO506aB1nb+Qeae88zA/sPqqpxVgQaf5cKbVKOaC5/4UoshrKd\nPaY9Smsc0tLaBvMmLgNNwfZk3fCx2lFOPAw+wgi7Hr0VYjJ6SXV7ip+IePG9fnj3\n779hiOv1fW5c/xGteAN+w9k/FQCAQ3dnoJmhyvAltTgb6TV9siePt2/xA1B1d0GB\n4XGJzYeyEPC0M/1cVojo6u2eqvmSL+WZdgPP6q/+BtUkyNpq5vQ8YjvSfpkYvhI8\n0K9dZBArgoKG0x5x4c8X2zhG4k7jdKLba5vJB6dZAgMBAAGjgZMwgZAwMwYDVR0R\nBCwwKoIVY29uanVyLmN5YmVyYXJrLmxvY2Fsgglsb2NhbGhvc3SCBmNvbmp1cjAd\nBgNVHQ4EFgQUEdxd50QTGc/VOU/aOct/hFS9rAQwHwYDVR0jBBgwFoAUEdxd50QT\nGc/VOU/aOct/hFS9rAQwDAYDVR0TBAUwAwEB/zALBgNVHQ8EBAMCAeYwDQYJKoZI\nhvcNAQELBQADggEBAGpAzTcb9mVKE4vo5tbqYOB8p9oiRQ9KvHfqMrfkg6gp4Nil\nf4Zs1hL75ae8WQflMLtD5v1EaEX7IclahEQDnnjgIAR11T3EEds4S6RLvKudCEeb\nsyaxRoUQPIBuDHDfFrzZG6i+I9ip/XVQwKmSY3lQTfSSGigFnZdiJDsk6qJGkS67\nGtAAA+YMA1OF7lZnS2VYflhNbp75UK+w5C9pn4FZrhhNwdeXjILWxqaWt8PPf94q\nykjvT6+GbpBLEMG+2nz455ziHnLE7uPzOrScN5/V8pdg4DJ09PnVe22LCv1YfAbu\npciRYvRgF1Q+SDMFDodAE3rFPQ8EAoe0njldeRE=\n-----END CERTIFICATE-----\n"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/etc/conjur.conf",
+      "tags": [
+        "file",
+        "class",
+        "conjur::config_files",
+        "conjur",
+        "config_files",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/etc/puppetlabs/code/environments/production/modules/conjur/manifests/config_files.pp",
+      "line": 12,
+      "exported": false,
+      "parameters": {
+        "replace": false,
+        "content": "appliance_url: https://conjur/api\nversion: 4\naccount: prod-webapp\ncert_file: /etc/conjur.pem\n"
+      }
+    },
+    {
+      "type": "Notify",
+      "title": "*** Secret key - encrypted:  ",
+      "tags": [
+        "notify",
+        "node",
+        "__node_regexp__prod-webapp.",
+        "class"
+      ],
+      "file": "/etc/puppetlabs/code/environments/production/manifests/site.pp",
+      "line": 39,
+      "exported": false
+    },
+    {
+      "type": "Notify",
+      "title": "*** Secret key - unencrypted:”,
+      "tags": [
+        "notify",
+        "node",
+        "__node_regexp__prod-webapp.",
+        "class"
+      ],
+      "file": "/etc/puppetlabs/code/environments/production/manifests/site.pp",
+      "line": 40,
+      "exported": false
+    },
+    {
+      "type": "Notify",
+      "title": "*** DB Password - encrypted: ",
+      "tags": [
+        "notify",
+        "node",
+        "__node_regexp__prod-webapp.",
+        "class"
+      ],
+      "file": "/etc/puppetlabs/code/environments/production/manifests/site.pp",
+      "line": 41,
+      "exported": false
+    },
+    {
+      "type": "Notify",
+      "title": "*** DB Password - unencrypted:  white rabbit ",
+      "tags": [
+        "notify",
+        "node",
+        "__node_regexp__prod-webapp.",
+        "class"
+      ],
+      "file": "/etc/puppetlabs/code/environments/production/manifests/site.pp",
+      "line": 42,
+      "exported": false
+    },
+    {
+      "type": "Notify",
+      "title": "******* Writing secret key to file /etc/mysecretkey ******",
+      "tags": [
+        "notify",
+        "node",
+        "__node_regexp__prod-webapp.",
+        "class"
+      ],
+      "file": "/etc/puppetlabs/code/environments/production/manifests/site.pp",
+      "line": 43,
+      "exported": false
+    },
+    {
+      "type": "File",
+      "title": "/etc/mysecretkey",
+      "tags": [
+        "file",
+        "node",
+        "__node_regexp__prod-webapp.",
+        "class"
+      ],
+      "file": "/etc/puppetlabs/code/environments/production/manifests/site.pp",
+      "line": 44,
+      "exported": false,
+      "parameters": {
+        "ensure": "file",
+        "content": "Se(re1Fr0mConjur",
+        "mode": "0600"
+      },
+      "sensitive_parameters": [
+        "content"
+      ]
+    },
+    {
+      "type": "Class",
+      "title": "Puppet_enterprise::Params",
+      "tags": [
+        "class",
+        "puppet_enterprise::params",
+        "puppet_enterprise",
+        "params",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "exported": false
+    },
+    {
+      "type": "Class",
+      "title": "Puppet_enterprise",
+      "tags": [
+        "class",
+        "puppet_enterprise",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "exported": false,
+      "parameters": {
+        "certificate_authority_host": "puppet.cyberark.local",
+        "console_host": "puppet.cyberark.local",
+        "database_host": "puppet.cyberark.local",
+        "mcollective_middleware_hosts": [
+          "puppet.cyberark.local"
+        ],
+        "pcp_broker_host": "puppet.cyberark.local",
+        "puppetdb_host": "puppet.cyberark.local",
+        "puppet_master_host": "puppet.cyberark.local",
+        "certificate_authority_port": 8140,
+        "puppet_master_port": 8140,
+        "console_port": 443,
+        "api_port": "4433",
+        "puppetdb_port": 8081,
+        "database_port": 5432,
+        "puppetdb_database_name": "pe-puppetdb",
+        "puppetdb_database_user": "pe-puppetdb",
+        "classifier_database_name": "pe-classifier",
+        "classifier_database_super_user": "pe-classifier",
+        "classifier_database_read_user": "pe-classifier-read",
+        "classifier_database_write_user": "pe-classifier-write",
+        "classifier_service_regular_db_user": "pe-classifier-write",
+        "classifier_service_migration_db_user": "pe-classifier",
+        "classifier_url_prefix": "/classifier-api",
+        "activity_database_name": "pe-activity",
+        "activity_database_super_user": "pe-activity",
+        "activity_database_read_user": "pe-activity-read",
+        "activity_database_write_user": "pe-activity-write",
+        "activity_service_migration_db_user": "pe-activity",
+        "activity_service_regular_db_user": "pe-activity-write",
+        "activity_url_prefix": "/activity-api",
+        "rbac_database_name": "pe-rbac",
+        "rbac_database_super_user": "pe-rbac",
+        "rbac_database_read_user": "pe-rbac-read",
+        "rbac_database_write_user": "pe-rbac-write",
+        "rbac_service_migration_db_user": "pe-rbac",
+        "rbac_service_regular_db_user": "pe-rbac-write",
+        "rbac_url_prefix": "/rbac-api",
+        "orchestrator_url_prefix": "/orchestrator",
+        "orchestrator_database_name": "pe-orchestrator",
+        "orchestrator_database_super_user": "pe-orchestrator",
+        "orchestrator_database_read_user": "pe-orchestrator-read",
+        "orchestrator_database_write_user": "pe-orchestrator-write",
+        "orchestrator_service_migration_db_user": "pe-orchestrator",
+        "orchestrator_service_regular_db_user": "pe-orchestrator-write",
+        "orchestrator_port": 8143,
+        "pglogical_keepalives_idle": 30,
+        "pglogical_keepalives_count": 2,
+        "database_ssl": true,
+        "database_cert_auth": true,
+        "license_key_path": "/etc/puppetlabs/license.key",
+        "send_analytics_data": true,
+        "mcollective_middleware_port": 61613,
+        "mcollective_middleware_user": "mcollective",
+        "mcollective_middleware_password": "rX6--CNdUEInKfpOy9wrsg",
+        "ssl_protocols": [
+          "TLSv1",
+          "TLSv1.1",
+          "TLSv1.2"
+        ],
+        "manage_symlinks": true,
+        "pcp_broker_port": 8142,
+        "puppetdb_sync_interval_minutes": 2,
+        "ha_enabled_replicas": []
+      }
+    },
+    {
+      "type": "Class",
+      "title": "Puppet_enterprise::Profile::Agent",
+      "tags": [
+        "class",
+        "puppet_enterprise::profile::agent",
+        "puppet_enterprise",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "exported": false,
+      "parameters": {
+        "manage_symlinks": true,
+        "pxp_enabled": true,
+        "pcp_broker_host": "puppet.cyberark.local",
+        "pcp_broker_port": 8142,
+        "manage_puppet_conf": false,
+        "server_list": [],
+        "pcp_broker_ws_uris": [],
+        "pcp_broker_list": [],
+        "package_inventory_enabled": false
+      }
+    },
+    {
+      "type": "Class",
+      "title": "Puppet_enterprise::Profile::Mcollective::Agent",
+      "tags": [
+        "class",
+        "puppet_enterprise::profile::mcollective::agent",
+        "puppet_enterprise",
+        "profile",
+        "mcollective",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "exported": false,
+      "parameters": {
+        "activemq_brokers": [
+          "puppet.cyberark.local"
+        ],
+        "allow_no_actionpolicy": "1",
+        "allowed_actions": {
+          "package": [
+            "status",
+            "update",
+            "yum_clean",
+            "apt_update",
+            "yum_checkupdates",
+            "apt_checkupdates",
+            "checkupdates"
+          ]
+        },
+        "collectives": [
+          "mcollective"
+        ],
+        "main_collective": "mcollective",
+        "manage_metadata_cron": true,
+        "mco_fact_cache_time": 300,
+        "mco_identity": "prod-webapp",
+        "mco_loglevel": "info",
+        "mco_registerinterval": 600,
+        "randomize_activemq": false,
+        "stomp_password": "rX6--CNdUEInKfpOy9wrsg",
+        "stomp_port": 61613,
+        "stomp_user": "mcollective"
+      }
+    },
+    {
+      "type": "Pe_anchor",
+      "title": "puppet_enterprise:barrier:ca",
+      "tags": [
+        "pe_anchor",
+        "puppet_enterprise:barrier:ca",
+        "class",
+        "puppet_enterprise",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/init.pp",
+      "line": 228,
+      "exported": false
+    },
+    {
+      "type": "Class",
+      "title": "Puppet_enterprise::Symlinks",
+      "tags": [
+        "class",
+        "puppet_enterprise::symlinks",
+        "puppet_enterprise",
+        "symlinks",
+        "puppet_enterprise::profile::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "exported": false,
+      "parameters": {
+        "manage_symlinks": true
+      }
+    },
+    {
+      "type": "File",
+      "title": "/usr/local",
+      "tags": [
+        "pe-agent-symlinks",
+        "pe-mco-symlinks",
+        "pe-master-symlinks",
+        "file",
+        "class",
+        "puppet_enterprise::symlinks",
+        "puppet_enterprise",
+        "symlinks",
+        "puppet_enterprise::profile::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/symlinks.pp",
+      "line": 31,
+      "exported": false,
+      "parameters": {
+        "ensure": "directory",
+        "replace": false,
+        "tag": [
+          "pe-agent-symlinks",
+          "pe-mco-symlinks",
+          "pe-master-symlinks"
+        ]
+      }
+    },
+    {
+      "type": "File",
+      "title": "/usr/local/bin",
+      "tags": [
+        "pe-agent-symlinks",
+        "pe-mco-symlinks",
+        "pe-master-symlinks",
+        "file",
+        "class",
+        "puppet_enterprise::symlinks",
+        "puppet_enterprise",
+        "symlinks",
+        "puppet_enterprise::profile::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/symlinks.pp",
+      "line": 31,
+      "exported": false,
+      "parameters": {
+        "ensure": "directory",
+        "replace": false,
+        "tag": [
+          "pe-agent-symlinks",
+          "pe-mco-symlinks",
+          "pe-master-symlinks"
+        ]
+      }
+    },
+    {
+      "type": "File",
+      "title": "/usr/local/bin/facter",
+      "tags": [
+        "pe-agent-symlinks",
+        "file",
+        "class",
+        "puppet_enterprise::symlinks",
+        "puppet_enterprise",
+        "symlinks",
+        "puppet_enterprise::profile::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/symlinks.pp",
+      "line": 37,
+      "exported": false,
+      "parameters": {
+        "ensure": "link",
+        "target": "/opt/puppetlabs/bin/facter",
+        "tag": "pe-agent-symlinks",
+        "require": "File[/usr/local/bin]"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/usr/local/bin/puppet",
+      "tags": [
+        "pe-agent-symlinks",
+        "file",
+        "class",
+        "puppet_enterprise::symlinks",
+        "puppet_enterprise",
+        "symlinks",
+        "puppet_enterprise::profile::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/symlinks.pp",
+      "line": 44,
+      "exported": false,
+      "parameters": {
+        "ensure": "link",
+        "target": "/opt/puppetlabs/bin/puppet",
+        "tag": "pe-agent-symlinks",
+        "require": "File[/usr/local/bin]"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/usr/local/bin/pe-man",
+      "tags": [
+        "pe-agent-symlinks",
+        "file",
+        "class",
+        "puppet_enterprise::symlinks",
+        "puppet_enterprise",
+        "symlinks",
+        "puppet_enterprise::profile::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/symlinks.pp",
+      "line": 51,
+      "exported": false,
+      "parameters": {
+        "ensure": "link",
+        "target": "/opt/puppetlabs/bin/pe-man",
+        "tag": "pe-agent-symlinks",
+        "require": "File[/usr/local/bin]"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/usr/local/bin/hiera",
+      "tags": [
+        "pe-agent-symlinks",
+        "file",
+        "class",
+        "puppet_enterprise::symlinks",
+        "puppet_enterprise",
+        "symlinks",
+        "puppet_enterprise::profile::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/symlinks.pp",
+      "line": 58,
+      "exported": false,
+      "parameters": {
+        "ensure": "link",
+        "target": "/opt/puppetlabs/bin/hiera",
+        "tag": "pe-agent-symlinks",
+        "require": "File[/usr/local/bin]"
+      }
+    },
+    {
+      "type": "Class",
+      "title": "Puppet_enterprise::Pxp_agent",
+      "tags": [
+        "class",
+        "puppet_enterprise::pxp_agent",
+        "puppet_enterprise",
+        "pxp_agent",
+        "puppet_enterprise::profile::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/profile/agent.pp",
+      "line": 63,
+      "exported": false,
+      "parameters": {
+        "broker_ws_uri": [
+          "wss://puppet.cyberark.local:8142/pcp2/"
+        ],
+        "master_uris": [
+          "https://puppet.cyberark.local:8140"
+        ],
+        "pcp_version": "2",
+        "enabled": true,
+        "pxp_loglevel": "info"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/etc/puppetlabs/pxp-agent/pxp-agent.conf",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::pxp_agent",
+        "puppet_enterprise",
+        "pxp_agent",
+        "puppet_enterprise::profile::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/pxp_agent.pp",
+      "line": 73,
+      "exported": false,
+      "parameters": {
+        "content": "{\"broker-ws-uris\":[\"wss://puppet.cyberark.local:8142/pcp2/\"],\"pcp-version\":\"2\",\"master-uris\":[\"https://puppet.cyberark.local:8140\"],\"ssl-key\":\"/etc/puppetlabs/puppet/ssl/private_keys/prod-webapp.pem\",\"ssl-cert\":\"/etc/puppetlabs/puppet/ssl/certs/prod-webapp.pem\",\"ssl-ca-cert\":\"/etc/puppetlabs/puppet/ssl/certs/ca.pem\",\"loglevel\":\"info\"}",
+        "mode": "0660",
+        "notify": "Service[pxp-agent]"
+      }
+    },
+    {
+      "type": "Class",
+      "title": "Puppet_enterprise::Pxp_agent::Service",
+      "tags": [
+        "class",
+        "puppet_enterprise::pxp_agent::service",
+        "puppet_enterprise",
+        "pxp_agent",
+        "service",
+        "puppet_enterprise::pxp_agent",
+        "puppet_enterprise::profile::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/pxp_agent.pp",
+      "line": 79,
+      "exported": false,
+      "parameters": {
+        "enabled": true
+      }
+    },
+    {
+      "type": "Service",
+      "title": "pxp-agent",
+      "tags": [
+        "service",
+        "pxp-agent",
+        "class",
+        "puppet_enterprise::pxp_agent::service",
+        "puppet_enterprise",
+        "pxp_agent",
+        "puppet_enterprise::pxp_agent",
+        "puppet_enterprise::profile::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/pxp_agent/service.pp",
+      "line": 4,
+      "exported": false,
+      "parameters": {
+        "ensure": true,
+        "enable": true,
+        "hasrestart": true
+      }
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppetlabs/puppet/cache/state/package_inventory_enabled",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::profile::agent",
+        "puppet_enterprise",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/profile/agent.pp",
+      "line": 95,
+      "exported": false,
+      "parameters": {
+        "ensure": "absent",
+        "mode": "0644"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/etc/puppetlabs/mcollective/ssl/clients/mcollective-public.pem",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::profile::mcollective::agent",
+        "puppet_enterprise",
+        "profile",
+        "mcollective",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/profile/mcollective/agent.pp",
+      "line": 52,
+      "exported": false,
+      "parameters": {
+        "ensure": "absent",
+        "mode": "0644"
+      }
+    },
+    {
+      "type": "Class",
+      "title": "Puppet_enterprise::Mcollective::Server",
+      "tags": [
+        "class",
+        "puppet_enterprise::mcollective::server",
+        "puppet_enterprise",
+        "mcollective",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/profile/mcollective/agent.pp",
+      "line": 56,
+      "exported": false,
+      "parameters": {
+        "activemq_brokers": [
+          "puppet.cyberark.local"
+        ],
+        "allow_no_actionpolicy": "1",
+        "collectives": [
+          "mcollective"
+        ],
+        "main_collective": "mcollective",
+        "allowed_actions": {
+          "package": [
+            "status",
+            "update",
+            "yum_clean",
+            "apt_update",
+            "yum_checkupdates",
+            "apt_checkupdates",
+            "checkupdates"
+          ]
+        },
+        "manage_metadata_cron": true,
+        "mco_fact_cache_time": 300,
+        "mco_identity": "prod-webapp",
+        "mco_loglevel": "info",
+        "mco_registerinterval": 600,
+        "randomize_activemq": false,
+        "stomp_password": "rX6--CNdUEInKfpOy9wrsg",
+        "stomp_port": 61613,
+        "stomp_user": "mcollective",
+        "activemq_heartbeat_interval": 120
+      }
+    },
+    {
+      "type": "Class",
+      "title": "Puppet_enterprise::Mcollective::Server::Plugins",
+      "tags": [
+        "class",
+        "puppet_enterprise::mcollective::server::plugins",
+        "puppet_enterprise",
+        "mcollective",
+        "server",
+        "plugins",
+        "puppet_enterprise::mcollective::server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "exported": false
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppetlabs/mcollective",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::server::plugins",
+        "puppet_enterprise",
+        "mcollective",
+        "server",
+        "plugins",
+        "puppet_enterprise::mcollective::server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/server/plugins.pp",
+      "line": 13,
+      "exported": false,
+      "parameters": {
+        "ensure": "directory",
+        "mode": "0644",
+        "owner": "root",
+        "group": "root"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppetlabs/mcollective/plugins",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::server::plugins",
+        "puppet_enterprise",
+        "mcollective",
+        "server",
+        "plugins",
+        "puppet_enterprise::mcollective::server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/server/plugins.pp",
+      "line": 15,
+      "exported": false,
+      "parameters": {
+        "ensure": "directory",
+        "mode": "0644",
+        "owner": "root",
+        "group": "root"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppetlabs/mcollective/plugins/mcollective",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::server::plugins",
+        "puppet_enterprise",
+        "mcollective",
+        "server",
+        "plugins",
+        "puppet_enterprise::mcollective::server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/server/plugins.pp",
+      "line": 21,
+      "exported": false,
+      "parameters": {
+        "ensure": "directory",
+        "recurse": "remote",
+        "source": "puppet:///modules/puppet_enterprise/mcollective/plugins",
+        "notify": "Service[mcollective]",
+        "mode": "0644",
+        "owner": "root",
+        "group": "root"
+      }
+    },
+    {
+      "type": "Class",
+      "title": "Puppet_enterprise::Mcollective::Service",
+      "tags": [
+        "class",
+        "puppet_enterprise::mcollective::service",
+        "puppet_enterprise",
+        "mcollective",
+        "service",
+        "puppet_enterprise::mcollective::server::plugins",
+        "server",
+        "plugins",
+        "puppet_enterprise::mcollective::server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "exported": false,
+      "parameters": {
+        "ensure": "running",
+        "enable": true
+      }
+    },
+    {
+      "type": "Service",
+      "title": "mcollective",
+      "tags": [
+        "service",
+        "mcollective",
+        "class",
+        "puppet_enterprise::mcollective::service",
+        "puppet_enterprise",
+        "puppet_enterprise::mcollective::server::plugins",
+        "server",
+        "plugins",
+        "puppet_enterprise::mcollective::server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/service.pp",
+      "line": 6,
+      "exported": false,
+      "parameters": {
+        "ensure": "running",
+        "enable": true,
+        "hasrestart": true
+      }
+    },
+    {
+      "type": "Class",
+      "title": "Puppet_enterprise::Mcollective::Server::Logs",
+      "tags": [
+        "class",
+        "puppet_enterprise::mcollective::server::logs",
+        "puppet_enterprise",
+        "mcollective",
+        "server",
+        "logs",
+        "puppet_enterprise::mcollective::server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "exported": false
+    },
+    {
+      "type": "File",
+      "title": "/var/log/puppetlabs/mcollective",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::server::logs",
+        "puppet_enterprise",
+        "mcollective",
+        "server",
+        "logs",
+        "puppet_enterprise::mcollective::server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/server/logs.pp",
+      "line": 13,
+      "exported": false,
+      "parameters": {
+        "ensure": "directory",
+        "mode": "0644",
+        "owner": "root",
+        "group": "root"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/var/log/puppetlabs/mcollective/mcollective.log",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::server::logs",
+        "puppet_enterprise",
+        "mcollective",
+        "server",
+        "logs",
+        "puppet_enterprise::mcollective::server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/server/logs.pp",
+      "line": 17,
+      "exported": false,
+      "parameters": {
+        "ensure": "present",
+        "mode": "0644",
+        "owner": "root",
+        "group": "root"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/var/log/puppetlabs/mcollective/mcollective-audit.log",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::server::logs",
+        "puppet_enterprise",
+        "mcollective",
+        "server",
+        "logs",
+        "puppet_enterprise::mcollective::server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/server/logs.pp",
+      "line": 17,
+      "exported": false,
+      "parameters": {
+        "ensure": "present",
+        "mode": "0644",
+        "owner": "root",
+        "group": "root"
+      }
+    },
+    {
+      "type": "Class",
+      "title": "Puppet_enterprise::Mcollective::Server::Certs",
+      "tags": [
+        "class",
+        "puppet_enterprise::mcollective::server::certs",
+        "puppet_enterprise",
+        "mcollective",
+        "server",
+        "certs",
+        "puppet_enterprise::mcollective::server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "exported": false
+    },
+    {
+      "type": "File",
+      "title": "/etc/puppetlabs/mcollective/ssl",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::server::certs",
+        "puppet_enterprise",
+        "mcollective",
+        "server",
+        "certs",
+        "puppet_enterprise::mcollective::server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/server/certs.pp",
+      "line": 37,
+      "exported": false,
+      "parameters": {
+        "ensure": "directory",
+        "mode": "0660",
+        "owner": "root",
+        "group": "root",
+        "notify": "Service[mcollective]",
+        "show_diff": false
+      }
+    },
+    {
+      "type": "File",
+      "title": "/etc/puppetlabs/mcollective/ssl/clients",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::server::certs",
+        "puppet_enterprise",
+        "mcollective",
+        "server",
+        "certs",
+        "puppet_enterprise::mcollective::server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/server/certs.pp",
+      "line": 37,
+      "exported": false,
+      "parameters": {
+        "ensure": "directory",
+        "mode": "0660",
+        "owner": "root",
+        "group": "root",
+        "notify": "Service[mcollective]",
+        "show_diff": false
+      }
+    },
+    {
+      "type": "File",
+      "title": "/etc/puppetlabs/mcollective/ssl/ca.cert.pem",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::server::certs",
+        "puppet_enterprise",
+        "mcollective",
+        "server",
+        "certs",
+        "puppet_enterprise::mcollective::server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/server/certs.pp",
+      "line": 41,
+      "exported": false,
+      "parameters": {
+        "source": "/etc/puppetlabs/puppet/ssl/certs/ca.pem",
+        "mode": "0660",
+        "owner": "root",
+        "group": "root",
+        "notify": "Service[mcollective]",
+        "show_diff": false
+      }
+    },
+    {
+      "type": "File",
+      "title": "/etc/puppetlabs/mcollective/ssl/prod-webapp.cert.pem",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::server::certs",
+        "puppet_enterprise",
+        "mcollective",
+        "server",
+        "certs",
+        "puppet_enterprise::mcollective::server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/server/certs.pp",
+      "line": 45,
+      "exported": false,
+      "parameters": {
+        "source": "/etc/puppetlabs/puppet/ssl/certs/prod-webapp.pem",
+        "mode": "0660",
+        "owner": "root",
+        "group": "root",
+        "notify": "Service[mcollective]",
+        "show_diff": false
+      }
+    },
+    {
+      "type": "File",
+      "title": "/etc/puppetlabs/mcollective/ssl/prod-webapp.private_key.pem",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::server::certs",
+        "puppet_enterprise",
+        "mcollective",
+        "server",
+        "certs",
+        "puppet_enterprise::mcollective::server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/server/certs.pp",
+      "line": 49,
+      "exported": false,
+      "parameters": {
+        "source": "/etc/puppetlabs/puppet/ssl/private_keys/prod-webapp.pem",
+        "mode": "0660",
+        "owner": "root",
+        "group": "root",
+        "notify": "Service[mcollective]",
+        "show_diff": false
+      }
+    },
+    {
+      "type": "File",
+      "title": "/etc/puppetlabs/mcollective/ssl/mcollective-private.pem",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::server::certs",
+        "puppet_enterprise",
+        "mcollective",
+        "server",
+        "certs",
+        "puppet_enterprise::mcollective::server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/server/certs.pp",
+      "line": 53,
+      "exported": false,
+      "parameters": {
+        "content": "-----BEGIN RSA PRIVATE KEY-----\nMIIJJwIBAAKCAgEAxRnnvX+VqIlrLEwSlNFG5vYsFv6tyFQgOFcerNif6v0p2CUZ\np5Zu7/TYR95zGQ3HrkmGohqJNREURzD6WwNcuwB4vg7oqx3s2KUNPEKUHsaUz4I1\npGqgp+zoSCsYf3yifF8D+UStMs0a3ClEhAZ6antJqBpcoLAa00q2On1OFGRsjYyB\nX5cQVRXTaFh/zvLQChIV1t4fPj6FyK20hd2p8F6uiNZfi4uT0Ilj8Ib1i+myfLDG\nAMDLF7Iyegt1jG7A5K9Ha9e1gi1iOBEp7UYx8mXay/iNdCK4al8AeQRJH13QJM+x\n8/n4Uh5cqkHh8sQ7ozQzfamFUv/NgZvQIuLPImqrkjvcI2LZNzWAn53FwvU9J94v\nVWQydJ5xSRrIaDD05qi5JHvlvjWAQxxTqckbntqB81c6lShEBPuTlkkdNrMYur+q\nbG/sdJeBOLRcuV9r7dbaQYKxIsFpyUegt7WA0ZcaJDqroY0Lmbx78wwA5fG4yTan\n8VVED3sFZxvF0Dks5fJ7NvNnr3WlSmSZrMxJdVI12C8o0Vs57mN5JZ/r0Ugsta4l\n2yEQo+pYKfhnJeQSg2ZcBr6/nd2rBW2vLnsD765NAQZFCm2hUEKuxwrJqT2ccUfG\n2u54Aaa2ssbGMTAQVsw2GTMaa1+rP3PYyBqXHcmC0OQcCwGsCr4fthMlq68CAwEA\nAQKCAgBuNYb70aw4GeagVUUKi15O5JVQokU/v7JobmZLlbENr1NHda87owUTDWAm\nB39qIedmT9yFJbtUveEN0Zgbbeza72+ULjfw/oGhveCBsmSqNLWethsSfUCpxPE4\n8Uf4eRNN4b8SEVGbF06OjlCuVgT7J0bPRTZH71CAlsUAPXJ8Oo7sMwVgEtLiEJsu\nPFXyvJiRGP23MGpd3o3l4SMQuxo7umVzRBMWrwwOzdPg+UWxXxIbYKjGYQbukAhj\nb6bhyEf5VvzjkzD9wiyqVwaPkvF4rXVDGg7WQlfFuqtD/553eHhbLPs/BaXRHQMJ\nfF8/5HPIVPb5q+FNwJUDhMFD0Hiqs7hVSUW8q2nJYKlTAheYc4AS+tq3f1WE7AEA\nTx7ViBAkPjmxRiN7XRnPwvedfgvhufnq68IGMEeJlVHa+1ZaQtOz7qkO64jGc0s0\nunDzEA+1DDVr4fR4yuDCNqpRU2qxxKmIOXNG2CFxCDvPk7u2qQHqpknK0Zsikqco\nx+pe5lahmZ1YaLsaVpsjidNbp8msvEZgG/91GZr4EMFbvKcu9bHhxZFovHdm8BAG\n8W58sC54NshehMDSBjWZViEsyZ+as9OHxYUrEKuZVimkyMkXGIAjamJ8Z6mbVOhs\nuB4LqdGWVM7UrrTmmjmm4xpptRH2W/8Vr7+Qm2XxFbGJm2HSgQKCAQEA/o2pFZaM\nRwWIr6QFfjlaPj1Rd9VB5F2hGg7aJ0u8+ySkPF4+0oZmNh1OmZkiUKQIlJcsN5IW\ngLe5VoGW+Sg1zVwXEM/9Uqs7UWPpIxBRhJo+x6y8pNrS01O9PkDObYZDHDVqsiIb\n1wuVy1BklZlgxPYVTk2G4fGNSZj6x7LCp5v838VCRX3zr67gUEQVxaWJQ3cdcNLK\nzhe5kESlJ+roxX2fPToAZzzkAgwl7kDp5Q3oU2z7iwNYA1fnWVBG05SzwXhZksUj\nQWtMSt1mQxK5o8g4aCdmBW427jbSMMbuzthTVQVmr2w1WuLgyVZT3Mj0SXljWDBs\nl99G8ORZfQlJbwKCAQEAxjio7jILQ1J9+XQJ6ND8fOaLhmJxYEopEDkEvjCxK4Ep\nle3LSnTCVzERxr29UEnREV1DpLhKU99Nr4oHGa5O/C0NS0TG7GlConM84CpBPkzx\nbvAZEh4Uo0ptUB4cVhjhmnQwXUpqi/awIkoX6D7NqbicR5xHULw2L/x9xZS9zFI2\nRed3CyafXQ0f6rhDWOXEmfByHXBR7BfVou3iayvBeU9Vw/uiLrjWQlpfMjCWMawH\nNvMAr/icrlKlR83++XtRRzTMKXaGFxLpPAdfb5LjqGSfTD219l/UsWrfhvqdfAPg\nWflPLzdiiEGlIMXHaaiNw0Jtr/ywogTYOywfizIhwQKCAQAubEdZ2IrcqPW0koUt\n7+e1Uhl5cTsDGtA2oF7Iq9dbNeN93vI2EqyxUcbz3CmV61RlROybddkEwHzceeW+\nqsalHRZXypa4bOH0hfQOoPs846RvZeFBb2bjg3IP2GHNN58lldhPhEjvfv1ihtbR\nMZekU/yuuxTOP+80bOHPaZp2VsxXQvJDGiVG9O2TtdcCpJ3T3/VOjiLOUyVUWjCE\nhyLMYYyY7esE6OXsOarxOIVvcIneLRHy2DlE4tMeRrWkAIqHzhsH2UwEsjzHqnjr\n4o5YgDtJQ2Ynt2HtL7JFkwIaVvlbmBCSDXntiVLVZRkGOt/SRoEHpE0ppV6asAph\n8z+hAoIBAHL5GFsY4dmJtpIDUWAeH+VeX91xqitcuJa1S9/5JDqEr5dMF1c3hCXI\ny3PISE+SkVaODxcy4cHmSwwfdmDZ7uxsQULAQNWNdF3/k3a+a5t0S7G6SABvPC8+\nk0seO/dgdTL+Y7Mo38YRLzakXVuTWf0wnE0ZA3B7yr5oqJb64F/r65j+Wdk47MSv\nQS0G9eFRXIiho78ZkBrt9DeN3X+mIJF5h9imUvrgsT5JZuAYuHVVP9YKewKWpGKk\ng0Oz40nX0lwH7se5/KrTiD8OU7fGro/U1WUGgk3GZfsGb2K+aKwvH2lwpxJPALLh\nyKLKtRC++IMiO7cRTW6cesNPo3g8esECggEAFw489SEXDO4NyR8hJhGGK0wVol2P\nag+pVLWiiiiPONYSVNMD3p8OeeUX3xP2Ezbf0m42FBuFBEyB+690jSLiA4/LxgNw\nCHsIHCBa5Y4OFz/hVFVLWO4hehYbPYHAYWaqgfHt7YoOfC/Ia8R0dxWYSE2KrGi7\nPtqikmE9pf6+FEXA9A6YVztE5SNR1S3a3ajTcSEDKJJRQqaKO/zedkH0z88ZrLXs\noEVaDGBzudn6qepGeFLnEviELBXTK0EcGhEjLRv358cMRKmDEIPtuTDYtJM6CojH\nE5p6r9Gshj5Rs4PgEnxhitXAg43w0vGToOy+TXk0pGMA3fBy5RF/6F5Q4Q==\n-----END RSA PRIVATE KEY-----\n",
+        "mode": "0660",
+        "owner": "root",
+        "group": "root",
+        "notify": "Service[mcollective]",
+        "show_diff": false
+      },
+      "sensitive_parameters": [
+        "content"
+      ]
+    },
+    {
+      "type": "File",
+      "title": "/etc/puppetlabs/mcollective/ssl/mcollective-public.pem",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::server::certs",
+        "puppet_enterprise",
+        "mcollective",
+        "server",
+        "certs",
+        "puppet_enterprise::mcollective::server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/server/certs.pp",
+      "line": 59,
+      "exported": false,
+      "parameters": {
+        "content": "-----BEGIN PUBLIC KEY-----\nMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAxRnnvX+VqIlrLEwSlNFG\n5vYsFv6tyFQgOFcerNif6v0p2CUZp5Zu7/TYR95zGQ3HrkmGohqJNREURzD6WwNc\nuwB4vg7oqx3s2KUNPEKUHsaUz4I1pGqgp+zoSCsYf3yifF8D+UStMs0a3ClEhAZ6\nantJqBpcoLAa00q2On1OFGRsjYyBX5cQVRXTaFh/zvLQChIV1t4fPj6FyK20hd2p\n8F6uiNZfi4uT0Ilj8Ib1i+myfLDGAMDLF7Iyegt1jG7A5K9Ha9e1gi1iOBEp7UYx\n8mXay/iNdCK4al8AeQRJH13QJM+x8/n4Uh5cqkHh8sQ7ozQzfamFUv/NgZvQIuLP\nImqrkjvcI2LZNzWAn53FwvU9J94vVWQydJ5xSRrIaDD05qi5JHvlvjWAQxxTqckb\nntqB81c6lShEBPuTlkkdNrMYur+qbG/sdJeBOLRcuV9r7dbaQYKxIsFpyUegt7WA\n0ZcaJDqroY0Lmbx78wwA5fG4yTan8VVED3sFZxvF0Dks5fJ7NvNnr3WlSmSZrMxJ\ndVI12C8o0Vs57mN5JZ/r0Ugsta4l2yEQo+pYKfhnJeQSg2ZcBr6/nd2rBW2vLnsD\n765NAQZFCm2hUEKuxwrJqT2ccUfG2u54Aaa2ssbGMTAQVsw2GTMaa1+rP3PYyBqX\nHcmC0OQcCwGsCr4fthMlq68CAwEAAQ==\n-----END PUBLIC KEY-----\n",
+        "mode": "0660",
+        "owner": "root",
+        "group": "root",
+        "notify": "Service[mcollective]",
+        "show_diff": false
+      }
+    },
+    {
+      "type": "File",
+      "title": "/etc/puppetlabs/mcollective/ssl/clients/puppet-dashboard-public.pem",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::server::certs",
+        "puppet_enterprise",
+        "mcollective",
+        "server",
+        "certs",
+        "puppet_enterprise::mcollective::server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/server/certs.pp",
+      "line": 65,
+      "exported": false,
+      "parameters": {
+        "content": "",
+        "mode": "0660",
+        "owner": "root",
+        "group": "root",
+        "notify": "Service[mcollective]",
+        "show_diff": false
+      }
+    },
+    {
+      "type": "File",
+      "title": "/etc/puppetlabs/mcollective/ssl/clients/peadmin-public.pem",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::server::certs",
+        "puppet_enterprise",
+        "mcollective",
+        "server",
+        "certs",
+        "puppet_enterprise::mcollective::server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/server/certs.pp",
+      "line": 71,
+      "exported": false,
+      "parameters": {
+        "content": "-----BEGIN PUBLIC KEY-----\nMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAw7xAC02+QQfwjVQgCmeJ\nesalCzfJpEZkXXINT3hcpkZmuf46iVEFB+jHjTvsane1uWqhe86zMYNMuNXlKOoG\nlptpKJtJnGwD89lzWI6V0oL00CWpzH8HLMDQAR4WBsg2ti7zeT6E2mzsGvTmFsAg\ntLi4FxhI44Ma6J7AP6nKpbWHJmteErKRy9laurET8YrRySZOORs2/AUZfQ55Jnmr\nKuYNxmwXIXOGZmiadGHxAERLlcNSJho+LIbrPcXRWmmOQvT8gb8YzY48XWIWF6nY\nYsvfHe5Xt8jiga94yalorr1MFSNXkdBnSjNTFC7n6w+XTZKamybxQ3BlHs17tN6+\n3NjsV4RMS57NTMx85EZEfmHN0V8/FPIaoHeRBR0gvqhUuUDMhagk3MDzoO784dSZ\nkVNiv/n6LnKlN9Fn24S7VuooHMG0C0wenqplgrvoo+cBiwKSAhMKkDjlfUOjY/GY\nDQYZ+LwpexfHdMBBU6SCMsBoqAbCV1zF4+iMfeQ9U6YYQtnLcVucGqsJ1mRQE7N0\nka7AJKkRP0/r4TIe+CuangqdTU3scRTIBJV2vFflMFDg8RNAffUrgj7x5/VO+grI\na/UltDKWSV3isiXZZmJixx47oxXFJoNd29i1478La6i6hg8fWYp2MqTrqRb02Spd\n7TWniahcSzLceGzUzmTXq0MCAwEAAQ==\n-----END PUBLIC KEY-----\n",
+        "mode": "0660",
+        "owner": "root",
+        "group": "root",
+        "notify": "Service[mcollective]",
+        "show_diff": false
+      }
+    },
+    {
+      "type": "Class",
+      "title": "Puppet_enterprise::Mcollective::Server::Facter",
+      "tags": [
+        "class",
+        "puppet_enterprise::mcollective::server::facter",
+        "puppet_enterprise",
+        "mcollective",
+        "server",
+        "facter",
+        "puppet_enterprise::mcollective::server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/server.pp",
+      "line": 61,
+      "exported": false,
+      "parameters": {
+        "manage_metadata_cron": true,
+        "mco_facter_interval": 15,
+        "mco_facter_interval_offset": 9,
+        "mco_facter_cron_minute": [
+          9,
+          24,
+          39,
+          54
+        ],
+        "mco_facter_windows_start_time": 13
+      }
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppetlabs/puppet/bin/refresh-mcollective-metadata",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::server::facter",
+        "puppet_enterprise",
+        "mcollective",
+        "server",
+        "facter",
+        "puppet_enterprise::mcollective::server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/server/facter.pp",
+      "line": 74,
+      "exported": false,
+      "parameters": {
+        "content": "#!/opt/puppetlabs/puppet/bin/ruby\n\nrequire \"yaml\"\nrequire 'puppet'\nrequire 'puppet/face'\n\nPuppet.initialize_settings\nfacts = Puppet::Face[:facts, '0.0.1'].find()\nfacts_y = facts.values.to_yaml\n\nFile.open('/etc/puppetlabs/mcollective/facts.yaml.new', 'w', :encoding => Encoding::UTF_8) do |f|\n  f.puts facts_y\nend\n\nFile.rename('/etc/puppetlabs/mcollective/facts.yaml.new', '/etc/puppetlabs/mcollective/facts.yaml')\n",
+        "before": [
+          "Cron[pe-mcollective-metadata]",
+          "Exec[bootstrap mcollective metadata]"
+        ],
+        "mode": "0775",
+        "owner": "root",
+        "group": "root"
+      }
+    },
+    {
+      "type": "Exec",
+      "title": "bootstrap mcollective metadata",
+      "tags": [
+        "exec",
+        "class",
+        "puppet_enterprise::mcollective::server::facter",
+        "puppet_enterprise",
+        "mcollective",
+        "server",
+        "facter",
+        "puppet_enterprise::mcollective::server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/server/facter.pp",
+      "line": 79,
+      "exported": false,
+      "parameters": {
+        "command": "/opt/puppetlabs/puppet/bin/refresh-mcollective-metadata >>/var/log/puppetlabs/mcollective/mcollective-metadata-cron.log 2>&1",
+        "creates": "/etc/puppetlabs/mcollective/facts-bootstrapped",
+        "require": "File[/opt/puppetlabs/puppet/bin/refresh-mcollective-metadata]",
+        "before": "Service[mcollective]"
+      }
+    },
+    {
+      "type": "Cron",
+      "title": "pe-mcollective-metadata",
+      "tags": [
+        "cron",
+        "pe-mcollective-metadata",
+        "class",
+        "puppet_enterprise::mcollective::server::facter",
+        "puppet_enterprise",
+        "mcollective",
+        "server",
+        "facter",
+        "puppet_enterprise::mcollective::server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/server/facter.pp",
+      "line": 87,
+      "exported": false,
+      "parameters": {
+        "command": "/opt/puppetlabs/puppet/bin/refresh-mcollective-metadata >>/var/log/puppetlabs/mcollective/mcollective-metadata-cron.log 2>&1",
+        "user": "root",
+        "minute": [
+          9,
+          24,
+          39,
+          54
+        ],
+        "require": "File[/opt/puppetlabs/puppet/bin/refresh-mcollective-metadata]"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/etc/puppetlabs/mcollective/facts-bootstrapped",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::server::facter",
+        "puppet_enterprise",
+        "mcollective",
+        "server",
+        "facter",
+        "puppet_enterprise::mcollective::server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/server/facter.pp",
+      "line": 100,
+      "exported": false,
+      "parameters": {
+        "ensure": "present",
+        "require": "Exec[bootstrap mcollective metadata]",
+        "notify": "Service[mcollective]",
+        "mode": "0775",
+        "owner": "root",
+        "group": "root"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/etc/puppetlabs/mcollective/server.cfg",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::server",
+        "puppet_enterprise",
+        "mcollective",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/server.pp",
+      "line": 86,
+      "exported": false,
+      "parameters": {
+        "content": "\n# Centrally managed by Puppet version 5.3.2\n# https://docs.puppetlabs.com/mcollective/configure/server.html\n\n# Connector settings (required):\n# -----------------------------\nconnector = activemq\ndirect_addressing = 1\n\n# ActiveMQ connector settings:\nplugin.activemq.randomize = false\nplugin.activemq.pool.size = 1\nplugin.activemq.pool.1.host = puppet.cyberark.local\nplugin.activemq.pool.1.port = 61613\nplugin.activemq.pool.1.user = mcollective\nplugin.activemq.pool.1.password = rX6--CNdUEInKfpOy9wrsg\nplugin.activemq.pool.1.ssl = true\nplugin.activemq.pool.1.ssl.ca = /etc/puppetlabs/mcollective/ssl/ca.cert.pem\nplugin.activemq.pool.1.ssl.cert = /etc/puppetlabs/mcollective/ssl/prod-webapp.cert.pem\nplugin.activemq.pool.1.ssl.key = /etc/puppetlabs/mcollective/ssl/prod-webapp.private_key.pem\nplugin.activemq.heartbeat_interval = 120\nplugin.activemq.max_hbrlck_fails = 2\n\n# Security plugin settings (required):\n# -----------------------------------\nsecurityprovider           = ssl\n\n# SSL plugin settings:\nplugin.ssl_server_private  = /etc/puppetlabs/mcollective/ssl/mcollective-private.pem\nplugin.ssl_server_public   = /etc/puppetlabs/mcollective/ssl/mcollective-public.pem\nplugin.ssl_client_cert_dir = /etc/puppetlabs/mcollective/ssl/clients\nplugin.ssl_serializer      = yaml\n\n# Facts, identity, and classes (recommended):\n# ------------------------------------------\nfactsource = yaml\nplugin.yaml = /etc/puppetlabs/mcollective/facts.yaml\nfact_cache_time = 300\n\nidentity = prod-webapp\n\nclassesfile = /opt/puppetlabs/puppet/cache/state/classes.txt\n\n# Registration (recommended):\n# -----------------------\nregistration = Meta\nregisterinterval = 600\n\n# Subcollectives (optional):\n# -------------------------\nmain_collective = mcollective\ncollectives     = mcollective\n\n# Auditing (optional):\n# -------------------\nplugin.rpcaudit.logfile = /var/log/puppetlabs/mcollective/mcollective-audit.log\nrpcaudit = 1\nrpcauditprovider = logfile\n\n# Authorization (optional):\n# ------------------------\nplugin.actionpolicy.allow_unconfigured = 1\nrpcauthorization = 1\nrpcauthprovider = action_policy\n\n# Logging:\n# -------\nlogfile  = /var/log/puppetlabs/mcollective/mcollective.log\nloglevel = info\n\n# Platform defaults:\n# -----------------\ndaemonize = 1\nlibdir = /opt/puppet/libexec/mcollective:/opt/puppetlabs/mcollective/plugins\n\n# Puppet Agent plugin configuration:\n# ---------------------------------\nplugin.puppet.splay = true\nplugin.puppet.splaylimit = 120\nplugin.puppet.signal_daemon = 0\nplugin.puppet.command = /opt/puppetlabs/bin/puppet agent\nplugin.puppet.config  = /etc/puppetlabs/puppet/puppet.conf\n\n",
+        "owner": "root",
+        "group": "root",
+        "mode": "0660",
+        "notify": "Service[mcollective]"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/etc/puppetlabs/mcollective/policies",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::server",
+        "puppet_enterprise",
+        "mcollective",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/server.pp",
+      "line": 94,
+      "exported": false,
+      "parameters": {
+        "ensure": "directory",
+        "owner": "root",
+        "group": "root",
+        "mode": "0660"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/etc/puppetlabs/mcollective/policies/package.policy",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::server",
+        "puppet_enterprise",
+        "mcollective",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/server.pp",
+      "line": 110,
+      "exported": false,
+      "parameters": {
+        "ensure": "file",
+        "content": "# managed by the PE mcollective::agent profile\npolicy default deny\nallow\t*\tstatus update yum_clean apt_update yum_checkupdates apt_checkupdates checkupdates\t*\t*\n",
+        "owner": "root",
+        "group": "root",
+        "mode": "0660",
+        "notify": "Service[mcollective]"
+      }
+    },
+    {
+      "type": "Class",
+      "title": "Puppet_enterprise::Mcollective::Cleanup",
+      "tags": [
+        "class",
+        "puppet_enterprise::mcollective::cleanup",
+        "puppet_enterprise",
+        "mcollective",
+        "cleanup",
+        "puppet_enterprise::mcollective::server",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "exported": false
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppet/libexec/mcollective/mcollective/agent/discovery.rb",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::cleanup",
+        "puppet_enterprise",
+        "mcollective",
+        "cleanup",
+        "puppet_enterprise::mcollective::server",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/cleanup.pp",
+      "line": 88,
+      "exported": false,
+      "parameters": {
+        "ensure": "absent",
+        "force": true,
+        "notify": "Service[mcollective]",
+        "mode": "0644"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppet/libexec/mcollective/mcollective/agent/package.ddl",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::cleanup",
+        "puppet_enterprise",
+        "mcollective",
+        "cleanup",
+        "puppet_enterprise::mcollective::server",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/cleanup.pp",
+      "line": 88,
+      "exported": false,
+      "parameters": {
+        "ensure": "absent",
+        "force": true,
+        "notify": "Service[mcollective]",
+        "mode": "0644"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppet/libexec/mcollective/mcollective/agent/package.rb",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::cleanup",
+        "puppet_enterprise",
+        "mcollective",
+        "cleanup",
+        "puppet_enterprise::mcollective::server",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/cleanup.pp",
+      "line": 88,
+      "exported": false,
+      "parameters": {
+        "ensure": "absent",
+        "force": true,
+        "notify": "Service[mcollective]",
+        "mode": "0644"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppet/libexec/mcollective/mcollective/agent/puppet.ddl",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::cleanup",
+        "puppet_enterprise",
+        "mcollective",
+        "cleanup",
+        "puppet_enterprise::mcollective::server",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/cleanup.pp",
+      "line": 88,
+      "exported": false,
+      "parameters": {
+        "ensure": "absent",
+        "force": true,
+        "notify": "Service[mcollective]",
+        "mode": "0644"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppet/libexec/mcollective/mcollective/agent/puppet.rb",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::cleanup",
+        "puppet_enterprise",
+        "mcollective",
+        "cleanup",
+        "puppet_enterprise::mcollective::server",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/cleanup.pp",
+      "line": 88,
+      "exported": false,
+      "parameters": {
+        "ensure": "absent",
+        "force": true,
+        "notify": "Service[mcollective]",
+        "mode": "0644"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppet/libexec/mcollective/mcollective/agent/puppetral.ddl",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::cleanup",
+        "puppet_enterprise",
+        "mcollective",
+        "cleanup",
+        "puppet_enterprise::mcollective::server",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/cleanup.pp",
+      "line": 88,
+      "exported": false,
+      "parameters": {
+        "ensure": "absent",
+        "force": true,
+        "notify": "Service[mcollective]",
+        "mode": "0644"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppet/libexec/mcollective/mcollective/agent/puppetral.rb",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::cleanup",
+        "puppet_enterprise",
+        "mcollective",
+        "cleanup",
+        "puppet_enterprise::mcollective::server",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/cleanup.pp",
+      "line": 88,
+      "exported": false,
+      "parameters": {
+        "ensure": "absent",
+        "force": true,
+        "notify": "Service[mcollective]",
+        "mode": "0644"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppet/libexec/mcollective/mcollective/agent/rpcutil.ddl",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::cleanup",
+        "puppet_enterprise",
+        "mcollective",
+        "cleanup",
+        "puppet_enterprise::mcollective::server",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/cleanup.pp",
+      "line": 88,
+      "exported": false,
+      "parameters": {
+        "ensure": "absent",
+        "force": true,
+        "notify": "Service[mcollective]",
+        "mode": "0644"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppet/libexec/mcollective/mcollective/agent/rpcutil.rb",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::cleanup",
+        "puppet_enterprise",
+        "mcollective",
+        "cleanup",
+        "puppet_enterprise::mcollective::server",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/cleanup.pp",
+      "line": 88,
+      "exported": false,
+      "parameters": {
+        "ensure": "absent",
+        "force": true,
+        "notify": "Service[mcollective]",
+        "mode": "0644"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppet/libexec/mcollective/mcollective/agent/service.ddl",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::cleanup",
+        "puppet_enterprise",
+        "mcollective",
+        "cleanup",
+        "puppet_enterprise::mcollective::server",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/cleanup.pp",
+      "line": 88,
+      "exported": false,
+      "parameters": {
+        "ensure": "absent",
+        "force": true,
+        "notify": "Service[mcollective]",
+        "mode": "0644"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppet/libexec/mcollective/mcollective/agent/service.rb",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::cleanup",
+        "puppet_enterprise",
+        "mcollective",
+        "cleanup",
+        "puppet_enterprise::mcollective::server",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/cleanup.pp",
+      "line": 88,
+      "exported": false,
+      "parameters": {
+        "ensure": "absent",
+        "force": true,
+        "notify": "Service[mcollective]",
+        "mode": "0644"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppet/libexec/mcollective/mcollective/aggregate/average.ddl",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::cleanup",
+        "puppet_enterprise",
+        "mcollective",
+        "cleanup",
+        "puppet_enterprise::mcollective::server",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/cleanup.pp",
+      "line": 88,
+      "exported": false,
+      "parameters": {
+        "ensure": "absent",
+        "force": true,
+        "notify": "Service[mcollective]",
+        "mode": "0644"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppet/libexec/mcollective/mcollective/aggregate/average.rb",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::cleanup",
+        "puppet_enterprise",
+        "mcollective",
+        "cleanup",
+        "puppet_enterprise::mcollective::server",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/cleanup.pp",
+      "line": 88,
+      "exported": false,
+      "parameters": {
+        "ensure": "absent",
+        "force": true,
+        "notify": "Service[mcollective]",
+        "mode": "0644"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppet/libexec/mcollective/mcollective/aggregate/boolean_summary.ddl",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::cleanup",
+        "puppet_enterprise",
+        "mcollective",
+        "cleanup",
+        "puppet_enterprise::mcollective::server",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/cleanup.pp",
+      "line": 88,
+      "exported": false,
+      "parameters": {
+        "ensure": "absent",
+        "force": true,
+        "notify": "Service[mcollective]",
+        "mode": "0644"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppet/libexec/mcollective/mcollective/aggregate/boolean_summary.rb",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::cleanup",
+        "puppet_enterprise",
+        "mcollective",
+        "cleanup",
+        "puppet_enterprise::mcollective::server",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/cleanup.pp",
+      "line": 88,
+      "exported": false,
+      "parameters": {
+        "ensure": "absent",
+        "force": true,
+        "notify": "Service[mcollective]",
+        "mode": "0644"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppet/libexec/mcollective/mcollective/aggregate/sum.ddl",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::cleanup",
+        "puppet_enterprise",
+        "mcollective",
+        "cleanup",
+        "puppet_enterprise::mcollective::server",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/cleanup.pp",
+      "line": 88,
+      "exported": false,
+      "parameters": {
+        "ensure": "absent",
+        "force": true,
+        "notify": "Service[mcollective]",
+        "mode": "0644"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppet/libexec/mcollective/mcollective/aggregate/sum.rb",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::cleanup",
+        "puppet_enterprise",
+        "mcollective",
+        "cleanup",
+        "puppet_enterprise::mcollective::server",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/cleanup.pp",
+      "line": 88,
+      "exported": false,
+      "parameters": {
+        "ensure": "absent",
+        "force": true,
+        "notify": "Service[mcollective]",
+        "mode": "0644"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppet/libexec/mcollective/mcollective/aggregate/summary.ddl",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::cleanup",
+        "puppet_enterprise",
+        "mcollective",
+        "cleanup",
+        "puppet_enterprise::mcollective::server",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/cleanup.pp",
+      "line": 88,
+      "exported": false,
+      "parameters": {
+        "ensure": "absent",
+        "force": true,
+        "notify": "Service[mcollective]",
+        "mode": "0644"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppet/libexec/mcollective/mcollective/aggregate/summary.rb",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::cleanup",
+        "puppet_enterprise",
+        "mcollective",
+        "cleanup",
+        "puppet_enterprise::mcollective::server",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/cleanup.pp",
+      "line": 88,
+      "exported": false,
+      "parameters": {
+        "ensure": "absent",
+        "force": true,
+        "notify": "Service[mcollective]",
+        "mode": "0644"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppet/libexec/mcollective/mcollective/application/completion.rb",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::cleanup",
+        "puppet_enterprise",
+        "mcollective",
+        "cleanup",
+        "puppet_enterprise::mcollective::server",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/cleanup.pp",
+      "line": 88,
+      "exported": false,
+      "parameters": {
+        "ensure": "absent",
+        "force": true,
+        "notify": "Service[mcollective]",
+        "mode": "0644"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppet/libexec/mcollective/mcollective/application/facts.rb",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::cleanup",
+        "puppet_enterprise",
+        "mcollective",
+        "cleanup",
+        "puppet_enterprise::mcollective::server",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/cleanup.pp",
+      "line": 88,
+      "exported": false,
+      "parameters": {
+        "ensure": "absent",
+        "force": true,
+        "notify": "Service[mcollective]",
+        "mode": "0644"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppet/libexec/mcollective/mcollective/application/find.rb",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::cleanup",
+        "puppet_enterprise",
+        "mcollective",
+        "cleanup",
+        "puppet_enterprise::mcollective::server",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/cleanup.pp",
+      "line": 88,
+      "exported": false,
+      "parameters": {
+        "ensure": "absent",
+        "force": true,
+        "notify": "Service[mcollective]",
+        "mode": "0644"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppet/libexec/mcollective/mcollective/application/help.rb",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::cleanup",
+        "puppet_enterprise",
+        "mcollective",
+        "cleanup",
+        "puppet_enterprise::mcollective::server",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/cleanup.pp",
+      "line": 88,
+      "exported": false,
+      "parameters": {
+        "ensure": "absent",
+        "force": true,
+        "notify": "Service[mcollective]",
+        "mode": "0644"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppet/libexec/mcollective/mcollective/application/inventory.rb",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::cleanup",
+        "puppet_enterprise",
+        "mcollective",
+        "cleanup",
+        "puppet_enterprise::mcollective::server",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/cleanup.pp",
+      "line": 88,
+      "exported": false,
+      "parameters": {
+        "ensure": "absent",
+        "force": true,
+        "notify": "Service[mcollective]",
+        "mode": "0644"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppet/libexec/mcollective/mcollective/application/package.rb",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::cleanup",
+        "puppet_enterprise",
+        "mcollective",
+        "cleanup",
+        "puppet_enterprise::mcollective::server",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/cleanup.pp",
+      "line": 88,
+      "exported": false,
+      "parameters": {
+        "ensure": "absent",
+        "force": true,
+        "notify": "Service[mcollective]",
+        "mode": "0644"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppet/libexec/mcollective/mcollective/application/ping.rb",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::cleanup",
+        "puppet_enterprise",
+        "mcollective",
+        "cleanup",
+        "puppet_enterprise::mcollective::server",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/cleanup.pp",
+      "line": 88,
+      "exported": false,
+      "parameters": {
+        "ensure": "absent",
+        "force": true,
+        "notify": "Service[mcollective]",
+        "mode": "0644"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppet/libexec/mcollective/mcollective/application/plugin.rb",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::cleanup",
+        "puppet_enterprise",
+        "mcollective",
+        "cleanup",
+        "puppet_enterprise::mcollective::server",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/cleanup.pp",
+      "line": 88,
+      "exported": false,
+      "parameters": {
+        "ensure": "absent",
+        "force": true,
+        "notify": "Service[mcollective]",
+        "mode": "0644"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppet/libexec/mcollective/mcollective/application/puppet.rb",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::cleanup",
+        "puppet_enterprise",
+        "mcollective",
+        "cleanup",
+        "puppet_enterprise::mcollective::server",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/cleanup.pp",
+      "line": 88,
+      "exported": false,
+      "parameters": {
+        "ensure": "absent",
+        "force": true,
+        "notify": "Service[mcollective]",
+        "mode": "0644"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppet/libexec/mcollective/mcollective/application/rpc.rb",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::cleanup",
+        "puppet_enterprise",
+        "mcollective",
+        "cleanup",
+        "puppet_enterprise::mcollective::server",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/cleanup.pp",
+      "line": 88,
+      "exported": false,
+      "parameters": {
+        "ensure": "absent",
+        "force": true,
+        "notify": "Service[mcollective]",
+        "mode": "0644"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppet/libexec/mcollective/mcollective/application/service.rb",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::cleanup",
+        "puppet_enterprise",
+        "mcollective",
+        "cleanup",
+        "puppet_enterprise::mcollective::server",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/cleanup.pp",
+      "line": 88,
+      "exported": false,
+      "parameters": {
+        "ensure": "absent",
+        "force": true,
+        "notify": "Service[mcollective]",
+        "mode": "0644"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppet/libexec/mcollective/mcollective/audit/logfile.rb",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::cleanup",
+        "puppet_enterprise",
+        "mcollective",
+        "cleanup",
+        "puppet_enterprise::mcollective::server",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/cleanup.pp",
+      "line": 88,
+      "exported": false,
+      "parameters": {
+        "ensure": "absent",
+        "force": true,
+        "notify": "Service[mcollective]",
+        "mode": "0644"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppet/libexec/mcollective/mcollective/connector/activemq.ddl",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::cleanup",
+        "puppet_enterprise",
+        "mcollective",
+        "cleanup",
+        "puppet_enterprise::mcollective::server",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/cleanup.pp",
+      "line": 88,
+      "exported": false,
+      "parameters": {
+        "ensure": "absent",
+        "force": true,
+        "notify": "Service[mcollective]",
+        "mode": "0644"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppet/libexec/mcollective/mcollective/connector/activemq.rb",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::cleanup",
+        "puppet_enterprise",
+        "mcollective",
+        "cleanup",
+        "puppet_enterprise::mcollective::server",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/cleanup.pp",
+      "line": 88,
+      "exported": false,
+      "parameters": {
+        "ensure": "absent",
+        "force": true,
+        "notify": "Service[mcollective]",
+        "mode": "0644"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppet/libexec/mcollective/mcollective/connector/rabbitmq.ddl",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::cleanup",
+        "puppet_enterprise",
+        "mcollective",
+        "cleanup",
+        "puppet_enterprise::mcollective::server",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/cleanup.pp",
+      "line": 88,
+      "exported": false,
+      "parameters": {
+        "ensure": "absent",
+        "force": true,
+        "notify": "Service[mcollective]",
+        "mode": "0644"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppet/libexec/mcollective/mcollective/connector/rabbitmq.rb",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::cleanup",
+        "puppet_enterprise",
+        "mcollective",
+        "cleanup",
+        "puppet_enterprise::mcollective::server",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/cleanup.pp",
+      "line": 88,
+      "exported": false,
+      "parameters": {
+        "ensure": "absent",
+        "force": true,
+        "notify": "Service[mcollective]",
+        "mode": "0644"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppet/libexec/mcollective/mcollective/data/agent_data.ddl",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::cleanup",
+        "puppet_enterprise",
+        "mcollective",
+        "cleanup",
+        "puppet_enterprise::mcollective::server",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/cleanup.pp",
+      "line": 88,
+      "exported": false,
+      "parameters": {
+        "ensure": "absent",
+        "force": true,
+        "notify": "Service[mcollective]",
+        "mode": "0644"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppet/libexec/mcollective/mcollective/data/agent_data.rb",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::cleanup",
+        "puppet_enterprise",
+        "mcollective",
+        "cleanup",
+        "puppet_enterprise::mcollective::server",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/cleanup.pp",
+      "line": 88,
+      "exported": false,
+      "parameters": {
+        "ensure": "absent",
+        "force": true,
+        "notify": "Service[mcollective]",
+        "mode": "0644"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppet/libexec/mcollective/mcollective/data/collective_data.ddl",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::cleanup",
+        "puppet_enterprise",
+        "mcollective",
+        "cleanup",
+        "puppet_enterprise::mcollective::server",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/cleanup.pp",
+      "line": 88,
+      "exported": false,
+      "parameters": {
+        "ensure": "absent",
+        "force": true,
+        "notify": "Service[mcollective]",
+        "mode": "0644"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppet/libexec/mcollective/mcollective/data/collective_data.rb",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::cleanup",
+        "puppet_enterprise",
+        "mcollective",
+        "cleanup",
+        "puppet_enterprise::mcollective::server",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/cleanup.pp",
+      "line": 88,
+      "exported": false,
+      "parameters": {
+        "ensure": "absent",
+        "force": true,
+        "notify": "Service[mcollective]",
+        "mode": "0644"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppet/libexec/mcollective/mcollective/data/fact_data.ddl",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::cleanup",
+        "puppet_enterprise",
+        "mcollective",
+        "cleanup",
+        "puppet_enterprise::mcollective::server",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/cleanup.pp",
+      "line": 88,
+      "exported": false,
+      "parameters": {
+        "ensure": "absent",
+        "force": true,
+        "notify": "Service[mcollective]",
+        "mode": "0644"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppet/libexec/mcollective/mcollective/data/fact_data.rb",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::cleanup",
+        "puppet_enterprise",
+        "mcollective",
+        "cleanup",
+        "puppet_enterprise::mcollective::server",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/cleanup.pp",
+      "line": 88,
+      "exported": false,
+      "parameters": {
+        "ensure": "absent",
+        "force": true,
+        "notify": "Service[mcollective]",
+        "mode": "0644"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppet/libexec/mcollective/mcollective/data/fstat_data.ddl",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::cleanup",
+        "puppet_enterprise",
+        "mcollective",
+        "cleanup",
+        "puppet_enterprise::mcollective::server",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/cleanup.pp",
+      "line": 88,
+      "exported": false,
+      "parameters": {
+        "ensure": "absent",
+        "force": true,
+        "notify": "Service[mcollective]",
+        "mode": "0644"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppet/libexec/mcollective/mcollective/data/fstat_data.rb",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::cleanup",
+        "puppet_enterprise",
+        "mcollective",
+        "cleanup",
+        "puppet_enterprise::mcollective::server",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/cleanup.pp",
+      "line": 88,
+      "exported": false,
+      "parameters": {
+        "ensure": "absent",
+        "force": true,
+        "notify": "Service[mcollective]",
+        "mode": "0644"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppet/libexec/mcollective/mcollective/data/puppet_data.ddl",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::cleanup",
+        "puppet_enterprise",
+        "mcollective",
+        "cleanup",
+        "puppet_enterprise::mcollective::server",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/cleanup.pp",
+      "line": 88,
+      "exported": false,
+      "parameters": {
+        "ensure": "absent",
+        "force": true,
+        "notify": "Service[mcollective]",
+        "mode": "0644"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppet/libexec/mcollective/mcollective/data/puppet_data.rb",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::cleanup",
+        "puppet_enterprise",
+        "mcollective",
+        "cleanup",
+        "puppet_enterprise::mcollective::server",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/cleanup.pp",
+      "line": 88,
+      "exported": false,
+      "parameters": {
+        "ensure": "absent",
+        "force": true,
+        "notify": "Service[mcollective]",
+        "mode": "0644"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppet/libexec/mcollective/mcollective/data/resource_data.ddl",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::cleanup",
+        "puppet_enterprise",
+        "mcollective",
+        "cleanup",
+        "puppet_enterprise::mcollective::server",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/cleanup.pp",
+      "line": 88,
+      "exported": false,
+      "parameters": {
+        "ensure": "absent",
+        "force": true,
+        "notify": "Service[mcollective]",
+        "mode": "0644"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppet/libexec/mcollective/mcollective/data/resource_data.rb",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::cleanup",
+        "puppet_enterprise",
+        "mcollective",
+        "cleanup",
+        "puppet_enterprise::mcollective::server",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/cleanup.pp",
+      "line": 88,
+      "exported": false,
+      "parameters": {
+        "ensure": "absent",
+        "force": true,
+        "notify": "Service[mcollective]",
+        "mode": "0644"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppet/libexec/mcollective/mcollective/data/service_data.ddl",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::cleanup",
+        "puppet_enterprise",
+        "mcollective",
+        "cleanup",
+        "puppet_enterprise::mcollective::server",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/cleanup.pp",
+      "line": 88,
+      "exported": false,
+      "parameters": {
+        "ensure": "absent",
+        "force": true,
+        "notify": "Service[mcollective]",
+        "mode": "0644"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppet/libexec/mcollective/mcollective/data/service_data.rb",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::cleanup",
+        "puppet_enterprise",
+        "mcollective",
+        "cleanup",
+        "puppet_enterprise::mcollective::server",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/cleanup.pp",
+      "line": 88,
+      "exported": false,
+      "parameters": {
+        "ensure": "absent",
+        "force": true,
+        "notify": "Service[mcollective]",
+        "mode": "0644"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppet/libexec/mcollective/mcollective/discovery/flatfile.ddl",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::cleanup",
+        "puppet_enterprise",
+        "mcollective",
+        "cleanup",
+        "puppet_enterprise::mcollective::server",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/cleanup.pp",
+      "line": 88,
+      "exported": false,
+      "parameters": {
+        "ensure": "absent",
+        "force": true,
+        "notify": "Service[mcollective]",
+        "mode": "0644"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppet/libexec/mcollective/mcollective/discovery/flatfile.rb",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::cleanup",
+        "puppet_enterprise",
+        "mcollective",
+        "cleanup",
+        "puppet_enterprise::mcollective::server",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/cleanup.pp",
+      "line": 88,
+      "exported": false,
+      "parameters": {
+        "ensure": "absent",
+        "force": true,
+        "notify": "Service[mcollective]",
+        "mode": "0644"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppet/libexec/mcollective/mcollective/discovery/mc.ddl",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::cleanup",
+        "puppet_enterprise",
+        "mcollective",
+        "cleanup",
+        "puppet_enterprise::mcollective::server",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/cleanup.pp",
+      "line": 88,
+      "exported": false,
+      "parameters": {
+        "ensure": "absent",
+        "force": true,
+        "notify": "Service[mcollective]",
+        "mode": "0644"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppet/libexec/mcollective/mcollective/discovery/mc.rb",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::cleanup",
+        "puppet_enterprise",
+        "mcollective",
+        "cleanup",
+        "puppet_enterprise::mcollective::server",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/cleanup.pp",
+      "line": 88,
+      "exported": false,
+      "parameters": {
+        "ensure": "absent",
+        "force": true,
+        "notify": "Service[mcollective]",
+        "mode": "0644"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppet/libexec/mcollective/mcollective/discovery/stdin.ddl",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::cleanup",
+        "puppet_enterprise",
+        "mcollective",
+        "cleanup",
+        "puppet_enterprise::mcollective::server",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/cleanup.pp",
+      "line": 88,
+      "exported": false,
+      "parameters": {
+        "ensure": "absent",
+        "force": true,
+        "notify": "Service[mcollective]",
+        "mode": "0644"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppet/libexec/mcollective/mcollective/discovery/stdin.rb",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::cleanup",
+        "puppet_enterprise",
+        "mcollective",
+        "cleanup",
+        "puppet_enterprise::mcollective::server",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/cleanup.pp",
+      "line": 88,
+      "exported": false,
+      "parameters": {
+        "ensure": "absent",
+        "force": true,
+        "notify": "Service[mcollective]",
+        "mode": "0644"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppet/libexec/mcollective/mcollective/facts/yaml_facts.rb",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::cleanup",
+        "puppet_enterprise",
+        "mcollective",
+        "cleanup",
+        "puppet_enterprise::mcollective::server",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/cleanup.pp",
+      "line": 88,
+      "exported": false,
+      "parameters": {
+        "ensure": "absent",
+        "force": true,
+        "notify": "Service[mcollective]",
+        "mode": "0644"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppet/libexec/mcollective/mcollective/registration/meta.rb",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::cleanup",
+        "puppet_enterprise",
+        "mcollective",
+        "cleanup",
+        "puppet_enterprise::mcollective::server",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/cleanup.pp",
+      "line": 88,
+      "exported": false,
+      "parameters": {
+        "ensure": "absent",
+        "force": true,
+        "notify": "Service[mcollective]",
+        "mode": "0644"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppet/libexec/mcollective/mcollective/security/sshkey.rb",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::cleanup",
+        "puppet_enterprise",
+        "mcollective",
+        "cleanup",
+        "puppet_enterprise::mcollective::server",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/cleanup.pp",
+      "line": 88,
+      "exported": false,
+      "parameters": {
+        "ensure": "absent",
+        "force": true,
+        "notify": "Service[mcollective]",
+        "mode": "0644"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppet/libexec/mcollective/mcollective/util/package",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::cleanup",
+        "puppet_enterprise",
+        "mcollective",
+        "cleanup",
+        "puppet_enterprise::mcollective::server",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/cleanup.pp",
+      "line": 88,
+      "exported": false,
+      "parameters": {
+        "ensure": "absent",
+        "force": true,
+        "notify": "Service[mcollective]",
+        "mode": "0644"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::cleanup",
+        "puppet_enterprise",
+        "mcollective",
+        "cleanup",
+        "puppet_enterprise::mcollective::server",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/cleanup.pp",
+      "line": 88,
+      "exported": false,
+      "parameters": {
+        "ensure": "absent",
+        "force": true,
+        "notify": "Service[mcollective]",
+        "mode": "0644"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppet/libexec/mcollective/mcollective/util/service",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::cleanup",
+        "puppet_enterprise",
+        "mcollective",
+        "cleanup",
+        "puppet_enterprise::mcollective::server",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/cleanup.pp",
+      "line": 88,
+      "exported": false,
+      "parameters": {
+        "ensure": "absent",
+        "force": true,
+        "notify": "Service[mcollective]",
+        "mode": "0644"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppet/libexec/mcollective/mcollective/util/actionpolicy.rb",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::cleanup",
+        "puppet_enterprise",
+        "mcollective",
+        "cleanup",
+        "puppet_enterprise::mcollective::server",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/cleanup.pp",
+      "line": 88,
+      "exported": false,
+      "parameters": {
+        "ensure": "absent",
+        "force": true,
+        "notify": "Service[mcollective]",
+        "mode": "0644"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr.rb",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::cleanup",
+        "puppet_enterprise",
+        "mcollective",
+        "cleanup",
+        "puppet_enterprise::mcollective::server",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/cleanup.pp",
+      "line": 88,
+      "exported": false,
+      "parameters": {
+        "ensure": "absent",
+        "force": true,
+        "notify": "Service[mcollective]",
+        "mode": "0644"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppet/libexec/mcollective/mcollective/util/puppet_server_address_validation.rb",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::cleanup",
+        "puppet_enterprise",
+        "mcollective",
+        "cleanup",
+        "puppet_enterprise::mcollective::server",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/cleanup.pp",
+      "line": 88,
+      "exported": false,
+      "parameters": {
+        "ensure": "absent",
+        "force": true,
+        "notify": "Service[mcollective]",
+        "mode": "0644"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppet/libexec/mcollective/mcollective/util/puppetrunner.rb",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::cleanup",
+        "puppet_enterprise",
+        "mcollective",
+        "cleanup",
+        "puppet_enterprise::mcollective::server",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/cleanup.pp",
+      "line": 88,
+      "exported": false,
+      "parameters": {
+        "ensure": "absent",
+        "force": true,
+        "notify": "Service[mcollective]",
+        "mode": "0644"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppet/libexec/mcollective/mcollective/validator/puppet_resource_validator.ddl",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::cleanup",
+        "puppet_enterprise",
+        "mcollective",
+        "cleanup",
+        "puppet_enterprise::mcollective::server",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/cleanup.pp",
+      "line": 88,
+      "exported": false,
+      "parameters": {
+        "ensure": "absent",
+        "force": true,
+        "notify": "Service[mcollective]",
+        "mode": "0644"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppet/libexec/mcollective/mcollective/validator/puppet_resource_validator.rb",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::cleanup",
+        "puppet_enterprise",
+        "mcollective",
+        "cleanup",
+        "puppet_enterprise::mcollective::server",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/cleanup.pp",
+      "line": 88,
+      "exported": false,
+      "parameters": {
+        "ensure": "absent",
+        "force": true,
+        "notify": "Service[mcollective]",
+        "mode": "0644"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppet/libexec/mcollective/mcollective/validator/puppet_server_address_validator.ddl",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::cleanup",
+        "puppet_enterprise",
+        "mcollective",
+        "cleanup",
+        "puppet_enterprise::mcollective::server",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/cleanup.pp",
+      "line": 88,
+      "exported": false,
+      "parameters": {
+        "ensure": "absent",
+        "force": true,
+        "notify": "Service[mcollective]",
+        "mode": "0644"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppet/libexec/mcollective/mcollective/validator/puppet_server_address_validator.rb",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::cleanup",
+        "puppet_enterprise",
+        "mcollective",
+        "cleanup",
+        "puppet_enterprise::mcollective::server",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/cleanup.pp",
+      "line": 88,
+      "exported": false,
+      "parameters": {
+        "ensure": "absent",
+        "force": true,
+        "notify": "Service[mcollective]",
+        "mode": "0644"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppet/libexec/mcollective/mcollective/validator/puppet_tags_validator.ddl",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::cleanup",
+        "puppet_enterprise",
+        "mcollective",
+        "cleanup",
+        "puppet_enterprise::mcollective::server",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/cleanup.pp",
+      "line": 88,
+      "exported": false,
+      "parameters": {
+        "ensure": "absent",
+        "force": true,
+        "notify": "Service[mcollective]",
+        "mode": "0644"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppet/libexec/mcollective/mcollective/validator/puppet_tags_validator.rb",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::cleanup",
+        "puppet_enterprise",
+        "mcollective",
+        "cleanup",
+        "puppet_enterprise::mcollective::server",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/cleanup.pp",
+      "line": 88,
+      "exported": false,
+      "parameters": {
+        "ensure": "absent",
+        "force": true,
+        "notify": "Service[mcollective]",
+        "mode": "0644"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppet/libexec/mcollective/mcollective/validator/puppet_variable_validator.ddl",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::cleanup",
+        "puppet_enterprise",
+        "mcollective",
+        "cleanup",
+        "puppet_enterprise::mcollective::server",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/cleanup.pp",
+      "line": 88,
+      "exported": false,
+      "parameters": {
+        "ensure": "absent",
+        "force": true,
+        "notify": "Service[mcollective]",
+        "mode": "0644"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppet/libexec/mcollective/mcollective/validator/puppet_variable_validator.rb",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::cleanup",
+        "puppet_enterprise",
+        "mcollective",
+        "cleanup",
+        "puppet_enterprise::mcollective::server",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/cleanup.pp",
+      "line": 88,
+      "exported": false,
+      "parameters": {
+        "ensure": "absent",
+        "force": true,
+        "notify": "Service[mcollective]",
+        "mode": "0644"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppet/libexec/mcollective/mcollective/validator/service_name.ddl",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::cleanup",
+        "puppet_enterprise",
+        "mcollective",
+        "cleanup",
+        "puppet_enterprise::mcollective::server",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/cleanup.pp",
+      "line": 88,
+      "exported": false,
+      "parameters": {
+        "ensure": "absent",
+        "force": true,
+        "notify": "Service[mcollective]",
+        "mode": "0644"
+      }
+    },
+    {
+      "type": "File",
+      "title": "/opt/puppet/libexec/mcollective/mcollective/validator/service_name.rb",
+      "tags": [
+        "file",
+        "class",
+        "puppet_enterprise::mcollective::cleanup",
+        "puppet_enterprise",
+        "mcollective",
+        "cleanup",
+        "puppet_enterprise::mcollective::server",
+        "server",
+        "puppet_enterprise::profile::mcollective::agent",
+        "profile",
+        "agent",
+        "node",
+        "__node_regexp__prod-webapp."
+      ],
+      "file": "/opt/puppetlabs/puppet/modules/puppet_enterprise/manifests/mcollective/cleanup.pp",
+      "line": 88,
+      "exported": false,
+      "parameters": {
+        "ensure": "absent",
+        "force": true,
+        "notify": "Service[mcollective]",
+        "mode": "0644"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "Stage[main]",
+      "target": "Class[Settings]"
+    },
+    {
+      "source": "Stage[main]",
+      "target": "Class[Main]"
+    },
+    {
+      "source": "Class[Main]",
+      "target": "Node[__node_regexp__prod-webapp.]"
+    },
+    {
+      "source": "Stage[main]",
+      "target": "Class[Conjur::Params]"
+    },
+    {
+      "source": "Stage[main]",
+      "target": "Class[Conjur]"
+    },
+    {
+      "source": "Stage[main]",
+      "target": "Class[Conjur::Config_files]"
+    },
+    {
+      "source": "Class[Conjur::Config_files]",
+      "target": "File[/etc/conjur.pem]"
+    },
+    {
+      "source": "Class[Conjur::Config_files]",
+      "target": "File[/etc/conjur.conf]"
+    },
+    {
+      "source": "Node[__node_regexp__prod-webapp.]",
+      "target": "Notify[*** Secret key - encrypted:  ]"
+    },
+    {
+      "source": "Node[__node_regexp__prod-webapp.]",
+      "target": "Notify[*** Secret key - unencrypted: Se(re1Fr0mConjur ]"
+    },
+    {
+      "source": "Node[__node_regexp__prod-webapp.]",
+      "target": "Notify[*** DB Password - encrypted:  Sensitive [value redacted] ]"
+    },
+    {
+      "source": "Node[__node_regexp__prod-webapp.]",
+      "target": "Notify[*** DB Password - unencrypted:  white rabbit ]"
+    },
+    {
+      "source": "Node[__node_regexp__prod-webapp.]",
+      "target": "Notify[******* Writing secret key to file /etc/mysecretkey ******]"
+    },
+    {
+      "source": "Node[__node_regexp__prod-webapp.]",
+      "target": "File[/etc/mysecretkey]"
+    },
+    {
+      "source": "Stage[main]",
+      "target": "Class[Puppet_enterprise::Params]"
+    },
+    {
+      "source": "Stage[main]",
+      "target": "Class[Puppet_enterprise]"
+    },
+    {
+      "source": "Stage[main]",
+      "target": "Class[Puppet_enterprise::Profile::Agent]"
+    },
+    {
+      "source": "Stage[main]",
+      "target": "Class[Puppet_enterprise::Profile::Mcollective::Agent]"
+    },
+    {
+      "source": "Class[Puppet_enterprise]",
+      "target": "Pe_anchor[puppet_enterprise:barrier:ca]"
+    },
+    {
+      "source": "Stage[main]",
+      "target": "Class[Puppet_enterprise::Symlinks]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Symlinks]",
+      "target": "File[/usr/local]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Symlinks]",
+      "target": "File[/usr/local/bin]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Symlinks]",
+      "target": "File[/usr/local/bin/facter]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Symlinks]",
+      "target": "File[/usr/local/bin/puppet]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Symlinks]",
+      "target": "File[/usr/local/bin/pe-man]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Symlinks]",
+      "target": "File[/usr/local/bin/hiera]"
+    },
+    {
+      "source": "Stage[main]",
+      "target": "Class[Puppet_enterprise::Pxp_agent]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Pxp_agent]",
+      "target": "File[/etc/puppetlabs/pxp-agent/pxp-agent.conf]"
+    },
+    {
+      "source": "Stage[main]",
+      "target": "Class[Puppet_enterprise::Pxp_agent::Service]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Pxp_agent::Service]",
+      "target": "Service[pxp-agent]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Profile::Agent]",
+      "target": "File[/opt/puppetlabs/puppet/cache/state/package_inventory_enabled]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Profile::Mcollective::Agent]",
+      "target": "File[/etc/puppetlabs/mcollective/ssl/clients/mcollective-public.pem]"
+    },
+    {
+      "source": "Stage[main]",
+      "target": "Class[Puppet_enterprise::Mcollective::Server]"
+    },
+    {
+      "source": "Stage[main]",
+      "target": "Class[Puppet_enterprise::Mcollective::Server::Plugins]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Server::Plugins]",
+      "target": "File[/opt/puppetlabs/mcollective]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Server::Plugins]",
+      "target": "File[/opt/puppetlabs/mcollective/plugins]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Server::Plugins]",
+      "target": "File[/opt/puppetlabs/mcollective/plugins/mcollective]"
+    },
+    {
+      "source": "Stage[main]",
+      "target": "Class[Puppet_enterprise::Mcollective::Service]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Service]",
+      "target": "Service[mcollective]"
+    },
+    {
+      "source": "Stage[main]",
+      "target": "Class[Puppet_enterprise::Mcollective::Server::Logs]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Server::Logs]",
+      "target": "File[/var/log/puppetlabs/mcollective]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Server::Logs]",
+      "target": "File[/var/log/puppetlabs/mcollective/mcollective.log]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Server::Logs]",
+      "target": "File[/var/log/puppetlabs/mcollective/mcollective-audit.log]"
+    },
+    {
+      "source": "Stage[main]",
+      "target": "Class[Puppet_enterprise::Mcollective::Server::Certs]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Server::Certs]",
+      "target": "File[/etc/puppetlabs/mcollective/ssl]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Server::Certs]",
+      "target": "File[/etc/puppetlabs/mcollective/ssl/clients]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Server::Certs]",
+      "target": "File[/etc/puppetlabs/mcollective/ssl/ca.cert.pem]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Server::Certs]",
+      "target": "File[/etc/puppetlabs/mcollective/ssl/prod-webapp.cert.pem]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Server::Certs]",
+      "target": "File[/etc/puppetlabs/mcollective/ssl/prod-webapp.private_key.pem]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Server::Certs]",
+      "target": "File[/etc/puppetlabs/mcollective/ssl/mcollective-private.pem]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Server::Certs]",
+      "target": "File[/etc/puppetlabs/mcollective/ssl/mcollective-public.pem]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Server::Certs]",
+      "target": "File[/etc/puppetlabs/mcollective/ssl/clients/puppet-dashboard-public.pem]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Server::Certs]",
+      "target": "File[/etc/puppetlabs/mcollective/ssl/clients/peadmin-public.pem]"
+    },
+    {
+      "source": "Stage[main]",
+      "target": "Class[Puppet_enterprise::Mcollective::Server::Facter]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Server::Facter]",
+      "target": "File[/opt/puppetlabs/puppet/bin/refresh-mcollective-metadata]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Server::Facter]",
+      "target": "Exec[bootstrap mcollective metadata]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Server::Facter]",
+      "target": "Cron[pe-mcollective-metadata]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Server::Facter]",
+      "target": "File[/etc/puppetlabs/mcollective/facts-bootstrapped]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Server]",
+      "target": "File[/etc/puppetlabs/mcollective/server.cfg]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Server]",
+      "target": "File[/etc/puppetlabs/mcollective/policies]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Server]",
+      "target": "File[/etc/puppetlabs/mcollective/policies/package.policy]"
+    },
+    {
+      "source": "Stage[main]",
+      "target": "Class[Puppet_enterprise::Mcollective::Cleanup]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Cleanup]",
+      "target": "File[/opt/puppet/libexec/mcollective/mcollective/agent/discovery.rb]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Cleanup]",
+      "target": "File[/opt/puppet/libexec/mcollective/mcollective/agent/package.ddl]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Cleanup]",
+      "target": "File[/opt/puppet/libexec/mcollective/mcollective/agent/package.rb]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Cleanup]",
+      "target": "File[/opt/puppet/libexec/mcollective/mcollective/agent/puppet.ddl]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Cleanup]",
+      "target": "File[/opt/puppet/libexec/mcollective/mcollective/agent/puppet.rb]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Cleanup]",
+      "target": "File[/opt/puppet/libexec/mcollective/mcollective/agent/puppetral.ddl]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Cleanup]",
+      "target": "File[/opt/puppet/libexec/mcollective/mcollective/agent/puppetral.rb]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Cleanup]",
+      "target": "File[/opt/puppet/libexec/mcollective/mcollective/agent/rpcutil.ddl]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Cleanup]",
+      "target": "File[/opt/puppet/libexec/mcollective/mcollective/agent/rpcutil.rb]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Cleanup]",
+      "target": "File[/opt/puppet/libexec/mcollective/mcollective/agent/service.ddl]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Cleanup]",
+      "target": "File[/opt/puppet/libexec/mcollective/mcollective/agent/service.rb]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Cleanup]",
+      "target": "File[/opt/puppet/libexec/mcollective/mcollective/aggregate/average.ddl]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Cleanup]",
+      "target": "File[/opt/puppet/libexec/mcollective/mcollective/aggregate/average.rb]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Cleanup]",
+      "target": "File[/opt/puppet/libexec/mcollective/mcollective/aggregate/boolean_summary.ddl]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Cleanup]",
+      "target": "File[/opt/puppet/libexec/mcollective/mcollective/aggregate/boolean_summary.rb]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Cleanup]",
+      "target": "File[/opt/puppet/libexec/mcollective/mcollective/aggregate/sum.ddl]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Cleanup]",
+      "target": "File[/opt/puppet/libexec/mcollective/mcollective/aggregate/sum.rb]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Cleanup]",
+      "target": "File[/opt/puppet/libexec/mcollective/mcollective/aggregate/summary.ddl]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Cleanup]",
+      "target": "File[/opt/puppet/libexec/mcollective/mcollective/aggregate/summary.rb]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Cleanup]",
+      "target": "File[/opt/puppet/libexec/mcollective/mcollective/application/completion.rb]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Cleanup]",
+      "target": "File[/opt/puppet/libexec/mcollective/mcollective/application/facts.rb]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Cleanup]",
+      "target": "File[/opt/puppet/libexec/mcollective/mcollective/application/find.rb]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Cleanup]",
+      "target": "File[/opt/puppet/libexec/mcollective/mcollective/application/help.rb]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Cleanup]",
+      "target": "File[/opt/puppet/libexec/mcollective/mcollective/application/inventory.rb]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Cleanup]",
+      "target": "File[/opt/puppet/libexec/mcollective/mcollective/application/package.rb]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Cleanup]",
+      "target": "File[/opt/puppet/libexec/mcollective/mcollective/application/ping.rb]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Cleanup]",
+      "target": "File[/opt/puppet/libexec/mcollective/mcollective/application/plugin.rb]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Cleanup]",
+      "target": "File[/opt/puppet/libexec/mcollective/mcollective/application/puppet.rb]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Cleanup]",
+      "target": "File[/opt/puppet/libexec/mcollective/mcollective/application/rpc.rb]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Cleanup]",
+      "target": "File[/opt/puppet/libexec/mcollective/mcollective/application/service.rb]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Cleanup]",
+      "target": "File[/opt/puppet/libexec/mcollective/mcollective/audit/logfile.rb]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Cleanup]",
+      "target": "File[/opt/puppet/libexec/mcollective/mcollective/connector/activemq.ddl]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Cleanup]",
+      "target": "File[/opt/puppet/libexec/mcollective/mcollective/connector/activemq.rb]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Cleanup]",
+      "target": "File[/opt/puppet/libexec/mcollective/mcollective/connector/rabbitmq.ddl]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Cleanup]",
+      "target": "File[/opt/puppet/libexec/mcollective/mcollective/connector/rabbitmq.rb]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Cleanup]",
+      "target": "File[/opt/puppet/libexec/mcollective/mcollective/data/agent_data.ddl]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Cleanup]",
+      "target": "File[/opt/puppet/libexec/mcollective/mcollective/data/agent_data.rb]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Cleanup]",
+      "target": "File[/opt/puppet/libexec/mcollective/mcollective/data/collective_data.ddl]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Cleanup]",
+      "target": "File[/opt/puppet/libexec/mcollective/mcollective/data/collective_data.rb]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Cleanup]",
+      "target": "File[/opt/puppet/libexec/mcollective/mcollective/data/fact_data.ddl]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Cleanup]",
+      "target": "File[/opt/puppet/libexec/mcollective/mcollective/data/fact_data.rb]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Cleanup]",
+      "target": "File[/opt/puppet/libexec/mcollective/mcollective/data/fstat_data.ddl]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Cleanup]",
+      "target": "File[/opt/puppet/libexec/mcollective/mcollective/data/fstat_data.rb]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Cleanup]",
+      "target": "File[/opt/puppet/libexec/mcollective/mcollective/data/puppet_data.ddl]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Cleanup]",
+      "target": "File[/opt/puppet/libexec/mcollective/mcollective/data/puppet_data.rb]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Cleanup]",
+      "target": "File[/opt/puppet/libexec/mcollective/mcollective/data/resource_data.ddl]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Cleanup]",
+      "target": "File[/opt/puppet/libexec/mcollective/mcollective/data/resource_data.rb]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Cleanup]",
+      "target": "File[/opt/puppet/libexec/mcollective/mcollective/data/service_data.ddl]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Cleanup]",
+      "target": "File[/opt/puppet/libexec/mcollective/mcollective/data/service_data.rb]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Cleanup]",
+      "target": "File[/opt/puppet/libexec/mcollective/mcollective/discovery/flatfile.ddl]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Cleanup]",
+      "target": "File[/opt/puppet/libexec/mcollective/mcollective/discovery/flatfile.rb]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Cleanup]",
+      "target": "File[/opt/puppet/libexec/mcollective/mcollective/discovery/mc.ddl]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Cleanup]",
+      "target": "File[/opt/puppet/libexec/mcollective/mcollective/discovery/mc.rb]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Cleanup]",
+      "target": "File[/opt/puppet/libexec/mcollective/mcollective/discovery/stdin.ddl]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Cleanup]",
+      "target": "File[/opt/puppet/libexec/mcollective/mcollective/discovery/stdin.rb]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Cleanup]",
+      "target": "File[/opt/puppet/libexec/mcollective/mcollective/facts/yaml_facts.rb]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Cleanup]",
+      "target": "File[/opt/puppet/libexec/mcollective/mcollective/registration/meta.rb]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Cleanup]",
+      "target": "File[/opt/puppet/libexec/mcollective/mcollective/security/sshkey.rb]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Cleanup]",
+      "target": "File[/opt/puppet/libexec/mcollective/mcollective/util/package]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Cleanup]",
+      "target": "File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Cleanup]",
+      "target": "File[/opt/puppet/libexec/mcollective/mcollective/util/service]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Cleanup]",
+      "target": "File[/opt/puppet/libexec/mcollective/mcollective/util/actionpolicy.rb]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Cleanup]",
+      "target": "File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr.rb]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Cleanup]",
+      "target": "File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_server_address_validation.rb]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Cleanup]",
+      "target": "File[/opt/puppet/libexec/mcollective/mcollective/util/puppetrunner.rb]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Cleanup]",
+      "target": "File[/opt/puppet/libexec/mcollective/mcollective/validator/puppet_resource_validator.ddl]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Cleanup]",
+      "target": "File[/opt/puppet/libexec/mcollective/mcollective/validator/puppet_resource_validator.rb]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Cleanup]",
+      "target": "File[/opt/puppet/libexec/mcollective/mcollective/validator/puppet_server_address_validator.ddl]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Cleanup]",
+      "target": "File[/opt/puppet/libexec/mcollective/mcollective/validator/puppet_server_address_validator.rb]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Cleanup]",
+      "target": "File[/opt/puppet/libexec/mcollective/mcollective/validator/puppet_tags_validator.ddl]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Cleanup]",
+      "target": "File[/opt/puppet/libexec/mcollective/mcollective/validator/puppet_tags_validator.rb]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Cleanup]",
+      "target": "File[/opt/puppet/libexec/mcollective/mcollective/validator/puppet_variable_validator.ddl]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Cleanup]",
+      "target": "File[/opt/puppet/libexec/mcollective/mcollective/validator/puppet_variable_validator.rb]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Cleanup]",
+      "target": "File[/opt/puppet/libexec/mcollective/mcollective/validator/service_name.ddl]"
+    },
+    {
+      "source": "Class[Puppet_enterprise::Mcollective::Cleanup]",
+      "target": "File[/opt/puppet/libexec/mcollective/mcollective/validator/service_name.rb]"
+    }
+  ],
+  "classes": [
+    "puppet_enterprise",
+    "puppet_enterprise::profile::agent",
+    "puppet_enterprise::profile::mcollective::agent",
+    "settings",
+    "__node_regexp__prod-webapp.",
+    "conjur::params",
+    "conjur",
+    "conjur::config_files",
+    "puppet_enterprise::params",
+    "puppet_enterprise",
+    "puppet_enterprise::profile::agent",
+    "puppet_enterprise::symlinks",
+    "puppet_enterprise::pxp_agent",
+    "puppet_enterprise::pxp_agent::service",
+    "puppet_enterprise::profile::mcollective::agent",
+    "puppet_enterprise::mcollective::server",
+    "puppet_enterprise::mcollective::server::plugins",
+    "puppet_enterprise::mcollective::service",
+    "puppet_enterprise::mcollective::server::logs",
+    "puppet_enterprise::mcollective::server::certs",
+    "puppet_enterprise::mcollective::server::facter",
+    "puppet_enterprise::mcollective::cleanup"
+  ]
+}
